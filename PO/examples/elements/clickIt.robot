@@ -16,9 +16,6 @@ Library          ../../../keywords/navigateToUrlAndVerify.py
 ${clickButton}           xpath=(//*[contains(text(),'Click Me')])[3]
 
 *** Keywords ***
-Open the browser
-    Create Webdriver    Chrome
-
 Navigate to the buttons page
     [Documentation]               Navigates to the login page.
     [Arguments]                   ${login_urlAddress}
@@ -28,6 +25,3 @@ Navigate to the buttons page
 Verify element exist and click on it
     Verify Element      ${clickButton}
     Click It            ${clickButton}
-
-Close Browser Session
-    Close Browser

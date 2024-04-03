@@ -1,50 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-03T23:15:25.495740" rpa="false" schemaversion="5">
-<suite id="s1" name="Element" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\element.robot">
-<test id="s1-t1" name="Verify Element Exist And It Is Only One In The DOM Three" line="15">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-03T23:29:38.335814" rpa="false" schemaversion="5">
+<suite id="s1" name="clickIt" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\clickIt.robot">
+<test id="s1-t1" name="Verify Element Exist And Click On It" line="15">
 <kw name="Start the browser" owner="common_keywords" type="SETUP">
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-04-03T23:15:25.683016" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-04-03T23:29:38.525411" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${browser}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-04-03T23:15:25.683016" elapsed="1.553572"/>
+<status status="PASS" start="2024-04-03T23:29:38.525411" elapsed="2.015553"/>
 </kw>
-<status status="PASS" start="2024-04-03T23:15:25.681996" elapsed="1.555591"/>
+<status status="PASS" start="2024-04-03T23:29:38.524391" elapsed="2.016573"/>
 </kw>
-<kw name="Navigate to the login page" owner="element">
+<kw name="Navigate to the buttons page" owner="clickIt">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-03T23:15:27.238091" level="INFO">https://demoqa.com/login</msg>
+<msg time="2024-04-03T23:29:40.541961" level="INFO">https://demoqa.com/buttons</msg>
 <arg>${login_urlAddress}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-03T23:15:27.238091" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-03T23:29:40.541961" elapsed="0.000000"/>
 </kw>
 <kw name="Navigate To Url And Verify" owner="navigateToUrlAndVerify">
-<msg time="2024-04-03T23:15:27.245699" level="INFO">Opening url 'https://demoqa.com/login'</msg>
+<msg time="2024-04-03T23:29:40.549024" level="INFO">Opening url 'https://demoqa.com/buttons'</msg>
 <arg>${login_urlAddress}</arg>
-<status status="PASS" start="2024-04-03T23:15:27.238091" elapsed="2.227895"/>
+<status status="PASS" start="2024-04-03T23:29:40.541961" elapsed="2.311737"/>
 </kw>
 <arg>${login_urlAddress}</arg>
 <doc>Navigates to the login page.</doc>
-<status status="PASS" start="2024-04-03T23:15:27.238091" elapsed="2.227895"/>
+<status status="PASS" start="2024-04-03T23:29:40.541961" elapsed="2.311737"/>
 </kw>
-<kw name="Verify element exist and it is only one in the DOM three" owner="element">
+<kw name="Verify element exist and click on it" owner="clickIt">
 <kw name="Verify Element" owner="verifyElement">
-<arg>${userName_inputTextElement}</arg>
-<status status="PASS" start="2024-04-03T23:15:29.465986" elapsed="0.009350"/>
+<arg>${clickButton}</arg>
+<status status="PASS" start="2024-04-03T23:29:42.853698" elapsed="0.009620"/>
 </kw>
-<status status="PASS" start="2024-04-03T23:15:29.465986" elapsed="0.009350"/>
+<kw name="Click It" owner="clickIt">
+<msg time="2024-04-03T23:29:42.871244" level="INFO">Clicking element 'xpath=(//*[contains(text(),'Click Me')])[3]'.</msg>
+<arg>${clickButton}</arg>
+<status status="PASS" start="2024-04-03T23:29:42.863318" elapsed="0.078512"/>
+</kw>
+<status status="PASS" start="2024-04-03T23:29:42.853698" elapsed="0.088132"/>
 </kw>
 <kw name="Kill Browser Session" owner="common_keywords" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-03T23:15:29.476336" elapsed="2.100885"/>
+<status status="PASS" start="2024-04-03T23:29:42.941830" elapsed="2.089319"/>
 </kw>
-<status status="PASS" start="2024-04-03T23:15:29.475336" elapsed="2.101885"/>
+<status status="PASS" start="2024-04-03T23:29:42.941830" elapsed="2.089319"/>
 </kw>
-<status status="PASS" start="2024-04-03T23:15:25.681996" elapsed="5.895225"/>
+<status status="PASS" start="2024-04-03T23:29:38.524391" elapsed="6.507293"/>
 </test>
 <doc>To validate the Login form</doc>
-<status status="PASS" start="2024-04-03T23:15:25.496744" elapsed="6.081985"/>
+<status status="PASS" start="2024-04-03T23:29:38.336815" elapsed="6.695873"/>
 </suite>
 <statistics>
 <total>
@@ -53,7 +58,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Element">Element</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="clickIt">clickIt</stat>
 </suite>
 </statistics>
 <errors>

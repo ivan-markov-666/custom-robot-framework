@@ -5,11 +5,12 @@ Documentation    A resource file with reusable keywords and variables.
 ...              domain specific language. They utilize keywords provided
 ...              by the imported SeleniumLibrary.
 Library          SeleniumLibrary
+Variables        ../../config/config.py
 
 # Declare global variables
 *** Variables ***
 # browser
-${browser}           Chrome
+${browser}           ${usedBrowser}
 
 *** Keywords ***
 Start the browser

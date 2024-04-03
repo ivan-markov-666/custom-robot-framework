@@ -15,9 +15,6 @@ Library          ../../../keywords/navigateToUrlAndVerify.py
 ${userName_inputTextElement}           id:userName
 
 *** Keywords ***
-Open the browser
-    Create Webdriver    Chrome
-
 Navigate to the login page
     [Documentation]               Navigates to the login page.
     [Arguments]                   ${login_urlAddress}
@@ -26,6 +23,3 @@ Navigate to the login page
 
 Verify element exist and it is only one in the DOM three
     Verify Element      ${userName_inputTextElement}
-
-Close Browser Session
-    Close Browser
