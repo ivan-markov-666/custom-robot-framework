@@ -1,12 +1,8 @@
 *** Settings ***
-Documentation    A resource file with reusable keywords and variables.
+Documentation
 ...
-...              The system specific keywords created here for our own
-...              domain specific language. They utilize keywords provided
-...              by the imported SeleniumLibrary.
-Library          SeleniumLibrary
-Library          ../../../keywords/verifyElement.py
-Library          ../../../keywords/navigateToUrlAndVerify.py
+...
+Resource          ../base.robot
 
 
 # Declare global variables
