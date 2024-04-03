@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-03T15:10:37.511743" rpa="false" schemaversion="5">
+<suite id="s1" name="loginExample" source="C:\Users\test657\RobotFramework\pythonProject\tests\loginExample.robot">
+<test id="s1-t1" name="Validate Successful Login" line="15">
+<kw name="Open the browser" owner="loginExample_po" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-04-03T15:10:37.678834" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-04-03T15:10:37.677805" elapsed="1.624108"/>
+</kw>
+<status status="PASS" start="2024-04-03T15:10:37.677805" elapsed="1.624108"/>
+</kw>
+<kw name="Navigate to the login page" owner="loginExample_po">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-03T15:10:39.302912" level="INFO">https://demoqa.com/login</msg>
+<arg>${login_urlAddress}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-03T15:10:39.301913" elapsed="0.000999"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-04-03T15:10:39.302912" level="INFO">Opening url 'https://demoqa.com/login'</msg>
+<arg>${login_urlAddress}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-04-03T15:10:39.302912" elapsed="2.189708"/>
+</kw>
+<arg>${login_urlAddress}</arg>
+<doc>Navigates to the login page.</doc>
+<status status="PASS" start="2024-04-03T15:10:39.301913" elapsed="2.190707"/>
+</kw>
+<kw name="Fill the form correctly" owner="loginExample_po">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-04-03T15:10:41.493621" level="INFO">Typing text 'testtesttest214ewrW!@' into text field 'id:userName'.</msg>
+<arg>${userName_inputTextElement}</arg>
+<arg>${usernameAndPassword_data}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-03T15:10:41.493621" elapsed="0.119482"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-04-03T15:10:41.613103" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg time="2024-04-03T15:10:41.645249" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>${password_inputTextElement}</arg>
+<arg>${usernameAndPassword_data}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-03T15:10:41.613103" elapsed="0.156565"/>
+</kw>
+<arg>${usernameAndPassword_data}</arg>
+<status status="PASS" start="2024-04-03T15:10:41.493621" elapsed="0.277046"/>
+</kw>
+<kw name="Press the Login button" owner="loginExample_po">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-04-03T15:10:41.770667" level="INFO">Clicking button 'id:login'.</msg>
+<arg>${loginButton}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-03T15:10:41.770667" elapsed="0.063180"/>
+</kw>
+<status status="PASS" start="2024-04-03T15:10:41.770667" elapsed="0.063180"/>
+</kw>
+<kw name="Verify that user is logged in" owner="loginExample_po">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${verifyUsername_text}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-03T15:10:41.835351" elapsed="0.846694"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-04-03T15:10:42.697450" level="INFO">${result} = testtesttest214ewrW!@</msg>
+<var>${result}</var>
+<arg>${verifyUsername_text}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-04-03T15:10:42.683044" elapsed="0.015405"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>${usernameAndPassword_data}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-04-03T15:10:42.698449" elapsed="0.000000"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-04-03T15:10:42.698951" level="INFO">Verifying element 'userName-value' contains exact text 'testtesttest214ewrW!@'.</msg>
+<arg>${verifyUsername_text}</arg>
+<arg>${usernameAndPassword_data}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-04-03T15:10:42.698449" elapsed="0.011524"/>
+</kw>
+<arg>${usernameAndPassword_data}</arg>
+<status status="PASS" start="2024-04-03T15:10:41.835351" elapsed="0.874622"/>
+</kw>
+<kw name="Close Browser Session" owner="loginExample_po" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-03T15:10:42.711568" elapsed="2.132874"/>
+</kw>
+<status status="PASS" start="2024-04-03T15:10:42.711568" elapsed="2.132874"/>
+</kw>
+<status status="PASS" start="2024-04-03T15:10:37.677805" elapsed="7.166637"/>
+</test>
+<doc>To validate the Login form</doc>
+<status status="PASS" start="2024-04-03T15:10:37.512712" elapsed="7.332730"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="loginExample">loginExample</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
