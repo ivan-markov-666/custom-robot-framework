@@ -2,7 +2,7 @@
 Documentation
 ...
 ...
-Resource          ../base.robot
+Resource          ../basePage.robot
 
 
 # Declare global variables

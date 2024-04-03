@@ -1,10 +1,10 @@
 *** Settings ***
-Documentation    To validate the Login form
+Documentation    Verify element exist and click on it
 Library          SeleniumLibrary
 Test Setup       Start the browser
 Test Teardown    Kill Browser Session
-Resource         ../../../PO/examples/elements/clickIt.robot
-Resource         ../../../PO/common_keywords/common_keywords.robot
+Resource         ../../../PO/examples/elements/clickItPage.robot
+Resource         ../../../PO/common_keywords/commonKeywordsPage.robot
 
 # Declare global variables
 *** Variables ***
