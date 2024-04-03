@@ -3,7 +3,7 @@ from robot.libraries.BuiltIn import BuiltIn
 from common_utils.common_utils import CommonUtils
 
 @keyword
-def verify_element_click(locator):
+def click_it(locator):
     # Извикване на verify_element от verifyElement.py
     CommonUtils.verify_element(locator)
 
