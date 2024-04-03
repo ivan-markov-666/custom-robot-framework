@@ -3,7 +3,7 @@ Documentation    To validate the Login form
 Library          SeleniumLibrary
 Test Setup       Open the browser
 Test Teardown    Close Browser Session
-Resource         loginExample_po.robot
+Resource         ../PO/loginExamplePage.robot
 
 # Declare global variables
 *** Variables ***
@@ -13,6 +13,7 @@ ${usernameAndPassword_data}            testtesttest214ewrW!@
 
 *** Test Cases ***
 Validate Successful Login
+    Example Keyword                  test1234567890
     Navigate to the login page       ${login_urlAddress}
     Fill the form correctly          ${usernameAndPassword_data}
     Press the Login button
