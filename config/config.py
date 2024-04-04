@@ -11,6 +11,11 @@ Settings:
 Make sure to configure these settings according to your testing requirements.
 """
 
+from dotenv import load_dotenv
+import os
+
+# Load the .env file.
+load_dotenv()
 
 # Set the browser. You can select between
 # "Chrome",
@@ -35,5 +40,7 @@ headless = False
 parallel_processes = 4
 
 # BaseURL.
+# This value came from .env file. The data behind that value is sensitive.
+# That's why it should be stored in the .env file.
 # Just make sure that you provide valid URL address in a string.
-baseUrl = "https://demoqa.com"
+baseUrl = os.getenv('BASE_URL')

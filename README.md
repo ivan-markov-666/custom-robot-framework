@@ -1,17 +1,20 @@
 ### Set-up:
-1. Install Python
-2. Install PowerShell  
+1. Clone the repo.
+2. Install Python
+3. Install PowerShell  
 You may need to change the policy for executing the scripts in the PowerShell is you get an error. To change the policy type the following command in your terminal:
 ```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned```  
 If you met a problem with the permissions, execute the command in PowerShell opened with Administrator rights.
-3. Add robotframework library
-4. Add selenium library
-5. Use VS Code or PyCharm IDE
-6. Download all web drivers that you will use and add the path of folder contains the drivers into the environment variables.
-7. Download and install all browsers that you will use for testing.  
+4. Add robotframework library
+5. Add selenium library
+6. Use VS Code or PyCharm IDE
+7. Download all web drivers that you will use and add the path of folder contains the drivers into the environment variables.
+8. Download and install all browsers that you will use for testing.  
 That frame was tested only with Chrome and Firefox, for all other browsers you may need to make changes in following files:   
 ```config/config.py``` - you will need to change the config for browser that you want to use.  
 ```PO/common_keywords/commonKeywordsPage.robot``` - you will need to add extra code for other browsers in the "Keywords" section.
+9. Go to the projects root folder and rename/copy ".env_EXAMPLE" file to ".env".  
+Open the ".env" file and provide all needed data (baseURL, etc.).
 
 ### Commands for executing the tests:
 You should use a PowerShell or Bash scripts for executing the tests. You can find all scripts in ./scripts folder located in the project roots.  
@@ -60,8 +63,6 @@ If you are using Robot Framework commands for executing the tests - the report w
 
 ### Configuration
 The boilerplate is using a Python file for configuration. For more details review the ```config/config.py``` file.
-
-pabot --processes 4 tests/examples/elements/
 
 ### To Do:
 1. Add headless support for all browsers that can be used from Robot Framework.
