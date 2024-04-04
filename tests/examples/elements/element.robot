@@ -14,5 +14,6 @@ ${login_urlAddress}                    ${baseUrl}/login
 
 *** Test Cases ***
 Verify Element Exist And It Is Only One In The DOM Three
+    [Tags]    examples    elements    element
     Navigate to the login page       ${login_urlAddress}
     Verify element exist and it is only one in the DOM three

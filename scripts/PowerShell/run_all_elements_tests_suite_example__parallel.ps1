@@ -1,3 +1,10 @@
+# Load methods.ps1
+. "$PSScriptRoot\methods\methods.ps1"
+
+# Call the Ensure-FolderExists method to check if the "report" folder exists.
+$reportPath = Join-Path $PSScriptRoot -ChildPath "..\..\..\report"
+Ensure-FolderExists -Path $reportPath
+
 # Importing the configuration file as a Python module
 $pythonCode = @"
 import sys
@@ -13,4 +20,4 @@ $processes = python -c $pythonCode
 $reportFolder = "report/" + (Get-Date -Format "yyyy-MM-dd_HHmmss")
 
 # Executing pabot with the number of processes read from the configuration file
-pabot --processes $processes --outputdir $reportFolder tests/examples/elements/
+pabot --processes $processes --outputdir $reportFolder --include elements tests/

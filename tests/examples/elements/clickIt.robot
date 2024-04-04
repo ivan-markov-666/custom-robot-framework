@@ -14,5 +14,6 @@ ${login_urlAddress}                    ${baseUrl}/buttons
 
 *** Test Cases ***
 Verify Element Exist And Click On It
+    [Tags]    examples    elements    clickIt
     Navigate to the buttons page       ${login_urlAddress}
     Verify element exist and click on it
