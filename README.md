@@ -29,3 +29,6 @@ In that case 4 tests will be executed at the same time.
 
 example:
 > pabot --processes 4 tests/examples/elements/
+
+### To Do:
+1. Add headless support for all browsers that can be used from Robot Framework.
