@@ -7,7 +7,9 @@ The project has examples for Custom Keywords (defined with Python). For more det
 ### Page Object
 The project has examples for Page Object Model implementation. For more details see files inside ```./PO``` folder.
 ### Tests
-All tests are placed in the ```./tests``` folder.
+All tests are placed in the ```./tests``` folder.  
+### Important
+Only files related to test ```clickIt``` and ```element``` have detailed comments and descriptions. You can use those tests for learning.
 
 ## Set-up:
 1. Clone the repo.
