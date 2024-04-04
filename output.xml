@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-04T08:48:44.246972" rpa="false" schemaversion="5">
+<suite id="s1" name="Elements" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements">
+<suite id="s1-s1" name="clickIt" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\clickIt.robot">
+<test id="s1-s1-t1" name="Verify Element Exist And Click On It" line="15">
+<kw name="Start the browser" owner="commonKeywordsPage" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-04-04T08:48:44.434308" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-04-04T08:48:44.434308" elapsed="5.384527"/>
+</kw>
+<status status="PASS" start="2024-04-04T08:48:44.433303" elapsed="5.385532"/>
+</kw>
+<kw name="Navigate to the buttons page" owner="clickItPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-04T08:48:49.820341" level="INFO">https://demoqa.com/buttons</msg>
+<arg>${login_urlAddress}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-04T08:48:49.820341" elapsed="0.001007"/>
+</kw>
+<kw name="Navigate To Url And Verify" owner="navigateToUrlAndVerify">
+<msg time="2024-04-04T08:48:49.830369" level="INFO">Opening url 'https://demoqa.com/buttons'</msg>
+<arg>${login_urlAddress}</arg>
+<status status="PASS" start="2024-04-04T08:48:49.821348" elapsed="1.632396"/>
+</kw>
+<arg>${login_urlAddress}</arg>
+<doc>Navigates to the login page.</doc>
+<status status="PASS" start="2024-04-04T08:48:49.820341" elapsed="1.633403"/>
+</kw>
+<kw name="Verify element exist and click on it" owner="clickItPage">
+<kw name="Verify Element" owner="verifyElement">
+<arg>${clickButton}</arg>
+<status status="PASS" start="2024-04-04T08:48:51.454745" elapsed="0.011056"/>
+</kw>
+<kw name="Click It" owner="clickIt">
+<msg time="2024-04-04T08:48:51.468824" level="INFO">Clicking element 'xpath=(//*[contains(text(),'Click Me')])[3]'.</msg>
+<arg>${clickButton}</arg>
+<status status="PASS" start="2024-04-04T08:48:51.465801" elapsed="0.224553"/>
+</kw>
+<status status="PASS" start="2024-04-04T08:48:51.453744" elapsed="0.237560"/>
+</kw>
+<kw name="Kill Browser Session" owner="commonKeywordsPage" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-04T08:48:51.691304" elapsed="2.789176"/>
+</kw>
+<status status="PASS" start="2024-04-04T08:48:51.691304" elapsed="2.789176"/>
+</kw>
+<status status="PASS" start="2024-04-04T08:48:44.433303" elapsed="10.047177"/>
+</test>
+<doc>Verify element exist and click on it</doc>
+<status status="PASS" start="2024-04-04T08:48:44.264007" elapsed="10.217425"/>
+</suite>
+<suite id="s1-s2" name="Element" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\element.robot">
+<test id="s1-s2-t1" name="Verify Element Exist And It Is Only One In The DOM Three" line="15">
+<kw name="Start the browser" owner="commonKeywordsPage" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-04-04T08:48:54.491524" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<arg>${browser}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-04-04T08:48:54.491524" elapsed="4.782378"/>
+</kw>
+<status status="PASS" start="2024-04-04T08:48:54.490582" elapsed="4.783320"/>
+</kw>
+<kw name="Navigate to the login page" owner="elementPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-04T08:48:59.273902" level="INFO">https://demoqa.com/login</msg>
+<arg>${login_urlAddress}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-04T08:48:59.273902" elapsed="0.000000"/>
+</kw>
+<kw name="Navigate To Url And Verify" owner="navigateToUrlAndVerify">
+<msg time="2024-04-04T08:48:59.275906" level="INFO">Opening url 'https://demoqa.com/login'</msg>
+<arg>${login_urlAddress}</arg>
+<status status="PASS" start="2024-04-04T08:48:59.273902" elapsed="1.296528"/>
+</kw>
+<arg>${login_urlAddress}</arg>
+<doc>Navigates to the login page.</doc>
+<status status="PASS" start="2024-04-04T08:48:59.273902" elapsed="1.296528"/>
+</kw>
+<kw name="Verify element exist and it is only one in the DOM three" owner="elementPage">
+<kw name="Verify Element" owner="verifyElement">
+<arg>${userName_inputTextElement}</arg>
+<status status="PASS" start="2024-04-04T08:49:00.570430" elapsed="0.008541"/>
+</kw>
+<status status="PASS" start="2024-04-04T08:49:00.570430" elapsed="0.008541"/>
+</kw>
+<kw name="Kill Browser Session" owner="commonKeywordsPage" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-04T08:49:00.578971" elapsed="2.861425"/>
+</kw>
+<status status="PASS" start="2024-04-04T08:49:00.578971" elapsed="2.861425"/>
+</kw>
+<status status="PASS" start="2024-04-04T08:48:54.490582" elapsed="8.949814"/>
+</test>
+<doc>Verify element exist and it is only one in the DOM three</doc>
+<status status="PASS" start="2024-04-04T08:48:54.481432" elapsed="8.959969"/>
+</suite>
+<status status="PASS" start="2024-04-04T08:48:44.247971" elapsed="19.194935"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="Elements">Elements</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="clickIt">Elements.clickIt</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s2" name="Element">Elements.Element</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
