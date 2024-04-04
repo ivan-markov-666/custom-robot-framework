@@ -1,4 +1,15 @@
-### Set-up:
+## About
+That repository contains custom boilerplate, that uses Robot Framework. It can be used for a one good start for every one project.  
+
+## Structure
+### Custom Keywords
+The project has examples for Custom Keywords (defined with Python). For more details see files inside ```./keywords``` folder.
+### Page Object
+The project has examples for Page Object Model implementation. For more details see files inside ```./PO``` folder.
+### Tests
+All tests are placed in the ```./tests``` folder.
+
+## Set-up:
 1. Clone the repo.
 2. Install Python
 3. Install PowerShell  
@@ -15,6 +26,8 @@ That frame was tested only with Chrome and Firefox, for all other browsers you m
 ```PO/common_keywords/commonKeywordsPage.robot``` - you will need to add extra code for other browsers in the "Keywords" section.
 9. Go to the projects root folder and rename/copy ".env_EXAMPLE" file to ".env".  
 Open the ".env" file and provide all needed data (baseURL, etc.).
+
+## Execution
 
 ### Commands for executing the tests:
 You should use a PowerShell or Bash scripts for executing the tests. You can find all scripts in ./scripts folder located in the project roots.  
@@ -56,9 +69,6 @@ In that case ***2*** tests will be executed at the same time. Change that number
 The suites are just upgraded scripts. To use suites you can add 'Tags' in the tests. You can see an examples in ```C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\element.robot``` and ```C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\clickIt.robot``` tests.  
 You can define your suites by adding options "--include [tag]" and "--exclude [tag]" to your executing command.
 
-<ins>Example:</ins>
-
-
 #### Windows Example
 <ins>Execute suite NOT in parallel:</ins>
 > ./scripts/PowerShell/run_all_elements_tests_suite_example.ps1  
@@ -85,14 +95,14 @@ To make your file executable use following command:
 <ins>example:</ins>
 > robot tests/examples/elements/
 
-### Reports
+## Reports
 If you are using PowerShell or Unix scripts, your reports will be generated in the "report" folder located in the projects root. Every one report will be placed in new folder named with current 'yyyy-mm-dd_hhmmss'.  
 If you are using Robot Framework commands for executing the tests - the report will be generated in the projects roots folder.
 
-### Configuration
+## Configuration
 The boilerplate is using a Python file for configuration. For more details review the ```config/config.py``` file.
 
-### To Do:
+## To Do:
 1. Add headless support for all browsers that can be used from Robot Framework.
 2. Test Unix scripts. The boilerplate was created in Windows OS.
 3. ***FIX ISSUE:*** For some reason some of the tests fails, when we are using PowerShell approach for executing the tests.
