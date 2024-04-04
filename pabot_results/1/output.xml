@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-04T09:16:28.659485" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-04T09:31:31.347337" rpa="false" schemaversion="5">
 <suite id="s1" name="Elements" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements">
 <suite id="s1-s1" name="clickIt" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\clickIt.robot">
 <test id="s1-s1-t1" name="Verify Element Exist And Click On It" line="15">
 <kw name="Start the browser" owner="commonKeywordsPage" type="SETUP">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-04-04T09:16:28.856811" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x0000025EC59E85F0&gt;</msg>
+<msg time="2024-04-04T09:31:31.541082" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x000001726B9E82C0&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${browser}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-04-04T09:16:28.855806" elapsed="0.001005"/>
+<status status="PASS" start="2024-04-04T09:31:31.541082" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Call Method" owner="BuiltIn">
@@ -18,7 +18,7 @@
 <arg>add_argument</arg>
 <arg>-headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-04-04T09:16:28.856811" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-04T09:31:31.541082" elapsed="0.001504"/>
 </kw>
 <arg>'${browser}' == 'Firefox' and ${HEADLESS}</arg>
 <arg>Call Method</arg>
@@ -26,7 +26,7 @@
 <arg>add_argument</arg>
 <arg>-headless</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-04T09:16:28.856811" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-04T09:31:31.541082" elapsed="0.001504"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>'${browser}' == 'Chrome' and ${HEADLESS}</arg>
@@ -35,7 +35,7 @@
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-04T09:16:28.857811" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-04T09:31:31.542586" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>'${browser}' == 'Chrome'</arg>
@@ -44,41 +44,41 @@
 <arg>add_argument</arg>
 <arg>--disable-gpu</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-04T09:16:28.857811" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-04T09:31:31.542586" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-04-04T09:16:28.857811" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<msg time="2024-04-04T09:31:31.543591" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
 <arg>${browser}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-04-04T09:16:28.857811" elapsed="4.692602"/>
+<status status="PASS" start="2024-04-04T09:31:31.542586" elapsed="4.633136"/>
 </kw>
-<status status="PASS" start="2024-04-04T09:16:28.855806" elapsed="4.694607"/>
+<status status="PASS" start="2024-04-04T09:31:31.540077" elapsed="4.635645"/>
 </kw>
 <kw name="Navigate to the buttons page" owner="clickItPage">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-04T09:16:33.551411" level="INFO">https://demoqa.com/buttons</msg>
+<msg time="2024-04-04T09:31:36.176722" level="INFO">https://demoqa.com/buttons</msg>
 <arg>${login_urlAddress}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-04T09:16:33.551411" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-04T09:31:36.176722" elapsed="0.000000"/>
 </kw>
 <kw name="Navigate To Url And Verify" owner="navigateToUrlAndVerify">
-<msg time="2024-04-04T09:16:33.562987" level="INFO">Opening url 'https://demoqa.com/buttons'</msg>
+<msg time="2024-04-04T09:31:36.184738" level="INFO">Opening url 'https://demoqa.com/buttons'</msg>
 <arg>${login_urlAddress}</arg>
-<status status="PASS" start="2024-04-04T09:16:33.551411" elapsed="2.118518"/>
+<status status="PASS" start="2024-04-04T09:31:36.176722" elapsed="1.351831"/>
 </kw>
 <arg>${login_urlAddress}</arg>
 <doc>Navigates to the login page.</doc>
-<status status="PASS" start="2024-04-04T09:16:33.550413" elapsed="2.119516"/>
+<status status="PASS" start="2024-04-04T09:31:36.175722" elapsed="1.352831"/>
 </kw>
 <kw name="Verify element exist and click on it" owner="clickItPage">
 <kw name="Verify Element" owner="verifyElement">
 <arg>${clickButton}</arg>
-<status status="PASS" start="2024-04-04T09:16:35.670903" elapsed="0.008785"/>
+<status status="PASS" start="2024-04-04T09:31:37.528553" elapsed="0.014453"/>
 </kw>
 <kw name="Click It" owner="clickIt">
-<msg time="2024-04-04T09:16:35.682688" level="INFO">Clicking element 'xpath=(//*[contains(text(),'Click Me')])[3]'.</msg>
-<msg time="2024-04-04T09:16:35.689740" level="FAIL">ElementClickInterceptedException: Message: Element &lt;button id="hQoK8" class="btn btn-primary" type="button"&gt; is not clickable at point (406,665) because another element &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0"&gt; obscures it
+<msg time="2024-04-04T09:31:37.558426" level="INFO">Clicking element 'xpath=(//*[contains(text(),'Click Me')])[3]'.</msg>
+<msg time="2024-04-04T09:31:37.576982" level="FAIL">ElementClickInterceptedException: Message: Element &lt;button id="ujREB" class="btn btn-primary" type="button"&gt; is not clickable at point (406,665) because another element &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0"&gt; obscures it
 Stacktrace:
 RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
 WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
@@ -89,7 +89,7 @@ clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.s
 receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:84:31
 </msg>
 <arg>${clickButton}</arg>
-<status status="FAIL" start="2024-04-04T09:16:35.680689" elapsed="0.015119">ElementClickInterceptedException: Message: Element &lt;button id="hQoK8" class="btn btn-primary" type="button"&gt; is not clickable at point (406,665) because another element &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0"&gt; obscures it
+<status status="FAIL" start="2024-04-04T09:31:37.543006" elapsed="0.036483">ElementClickInterceptedException: Message: Element &lt;button id="ujREB" class="btn btn-primary" type="button"&gt; is not clickable at point (406,665) because another element &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0"&gt; obscures it
 Stacktrace:
 RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
 WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
@@ -100,7 +100,7 @@ clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.s
 receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:84:31
 </status>
 </kw>
-<status status="FAIL" start="2024-04-04T09:16:35.669929" elapsed="0.026884">ElementClickInterceptedException: Message: Element &lt;button id="hQoK8" class="btn btn-primary" type="button"&gt; is not clickable at point (406,665) because another element &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0"&gt; obscures it
+<status status="FAIL" start="2024-04-04T09:31:37.528553" elapsed="0.051473">ElementClickInterceptedException: Message: Element &lt;button id="ujREB" class="btn btn-primary" type="button"&gt; is not clickable at point (406,665) because another element &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0"&gt; obscures it
 Stacktrace:
 RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
 WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
@@ -114,11 +114,11 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild
 <kw name="Kill Browser Session" owner="commonKeywordsPage" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-04T09:16:35.696813" elapsed="2.793842"/>
+<status status="PASS" start="2024-04-04T09:31:37.582039" elapsed="2.939472"/>
 </kw>
-<status status="PASS" start="2024-04-04T09:16:35.696813" elapsed="2.793842"/>
+<status status="PASS" start="2024-04-04T09:31:37.580026" elapsed="2.941485"/>
 </kw>
-<status status="FAIL" start="2024-04-04T09:16:28.854716" elapsed="9.635939">ElementClickInterceptedException: Message: Element &lt;button id="hQoK8" class="btn btn-primary" type="button"&gt; is not clickable at point (406,665) because another element &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0"&gt; obscures it
+<status status="FAIL" start="2024-04-04T09:31:31.540077" elapsed="8.981434">ElementClickInterceptedException: Message: Element &lt;button id="ujREB" class="btn btn-primary" type="button"&gt; is not clickable at point (406,665) because another element &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0"&gt; obscures it
 Stacktrace:
 RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
 WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
@@ -130,9 +130,9 @@ receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild
 </status>
 </test>
 <doc>Verify element exist and click on it</doc>
-<status status="FAIL" start="2024-04-04T09:16:28.679113" elapsed="9.811542"/>
+<status status="FAIL" start="2024-04-04T09:31:31.366613" elapsed="9.155896"/>
 </suite>
-<status status="FAIL" start="2024-04-04T09:16:28.668496" elapsed="9.823161"/>
+<status status="FAIL" start="2024-04-04T09:31:31.355351" elapsed="9.167662"/>
 </suite>
 <statistics>
 <total>

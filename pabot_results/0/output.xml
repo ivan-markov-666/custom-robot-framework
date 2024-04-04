@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-04T09:16:28.657485" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-04T09:31:31.357352" rpa="false" schemaversion="5">
 <suite id="s1" name="Elements" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements">
 <suite id="s1-s1" name="Element" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\element.robot">
 <test id="s1-s1-t1" name="Verify Element Exist And It Is Only One In The DOM Three" line="15">
 <kw name="Start the browser" owner="commonKeywordsPage" type="SETUP">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-04-04T09:16:28.856811" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x0000016E704D8230&gt;</msg>
+<msg time="2024-04-04T09:31:31.544591" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x0000024E45A148F0&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${browser}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-04-04T09:16:28.855806" elapsed="0.001005"/>
+<status status="PASS" start="2024-04-04T09:31:31.544591" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Call Method" owner="BuiltIn">
@@ -18,7 +18,7 @@
 <arg>add_argument</arg>
 <arg>-headless</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-04-04T09:16:28.856811" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-04T09:31:31.544591" elapsed="0.001006"/>
 </kw>
 <arg>'${browser}' == 'Firefox' and ${HEADLESS}</arg>
 <arg>Call Method</arg>
@@ -26,7 +26,7 @@
 <arg>add_argument</arg>
 <arg>-headless</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-04T09:16:28.856811" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-04T09:31:31.544591" elapsed="0.001006"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>'${browser}' == 'Chrome' and ${HEADLESS}</arg>
@@ -35,7 +35,7 @@
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-04T09:16:28.856811" elapsed="0.001000"/>
+<status status="PASS" start="2024-04-04T09:31:31.545597" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>'${browser}' == 'Chrome'</arg>
@@ -44,53 +44,53 @@
 <arg>add_argument</arg>
 <arg>--disable-gpu</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-04T09:16:28.857811" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-04T09:31:31.545597" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-04-04T09:16:28.857811" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
+<msg time="2024-04-04T09:31:31.546595" level="INFO">Creating an instance of the Firefox WebDriver.</msg>
 <arg>${browser}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-04-04T09:16:28.857811" elapsed="4.692602"/>
+<status status="PASS" start="2024-04-04T09:31:31.545597" elapsed="4.630125"/>
 </kw>
-<status status="PASS" start="2024-04-04T09:16:28.855806" elapsed="4.694607"/>
+<status status="PASS" start="2024-04-04T09:31:31.543591" elapsed="4.632131"/>
 </kw>
 <kw name="Navigate to the login page" owner="elementPage">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-04T09:16:33.551411" level="INFO">https://demoqa.com/login</msg>
+<msg time="2024-04-04T09:31:36.175722" level="INFO">https://demoqa.com/login</msg>
 <arg>${login_urlAddress}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-04T09:16:33.550413" elapsed="0.000998"/>
+<status status="PASS" start="2024-04-04T09:31:36.175722" elapsed="0.001000"/>
 </kw>
 <kw name="Navigate To Url And Verify" owner="navigateToUrlAndVerify">
-<msg time="2024-04-04T09:16:33.560475" level="INFO">Opening url 'https://demoqa.com/login'</msg>
+<msg time="2024-04-04T09:31:36.184738" level="INFO">Opening url 'https://demoqa.com/login'</msg>
 <arg>${login_urlAddress}</arg>
-<status status="PASS" start="2024-04-04T09:16:33.551411" elapsed="1.998924"/>
+<status status="PASS" start="2024-04-04T09:31:36.176722" elapsed="1.592590"/>
 </kw>
 <arg>${login_urlAddress}</arg>
 <doc>Navigates to the login page.</doc>
-<status status="PASS" start="2024-04-04T09:16:33.550413" elapsed="1.999922"/>
+<status status="PASS" start="2024-04-04T09:31:36.175722" elapsed="1.593590"/>
 </kw>
 <kw name="Verify element exist and it is only one in the DOM three" owner="elementPage">
 <kw name="Verify Element" owner="verifyElement">
 <arg>${userName_inputTextElement}</arg>
-<status status="PASS" start="2024-04-04T09:16:35.550335" elapsed="0.008074"/>
+<status status="PASS" start="2024-04-04T09:31:37.770319" elapsed="0.012544"/>
 </kw>
-<status status="PASS" start="2024-04-04T09:16:35.550335" elapsed="0.008074"/>
+<status status="PASS" start="2024-04-04T09:31:37.770319" elapsed="0.012544"/>
 </kw>
 <kw name="Kill Browser Session" owner="commonKeywordsPage" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-04T09:16:35.559407" elapsed="2.807344"/>
+<status status="PASS" start="2024-04-04T09:31:37.783863" elapsed="2.815674"/>
 </kw>
-<status status="PASS" start="2024-04-04T09:16:35.558409" elapsed="2.808342"/>
+<status status="PASS" start="2024-04-04T09:31:37.782863" elapsed="2.816674"/>
 </kw>
-<status status="PASS" start="2024-04-04T09:16:28.854716" elapsed="9.512035"/>
+<status status="PASS" start="2024-04-04T09:31:31.543591" elapsed="9.055946"/>
 </test>
 <doc>Verify element exist and it is only one in the DOM three</doc>
-<status status="PASS" start="2024-04-04T09:16:28.677570" elapsed="9.690181"/>
+<status status="PASS" start="2024-04-04T09:31:31.375625" elapsed="9.224917"/>
 </suite>
-<status status="PASS" start="2024-04-04T09:16:28.666496" elapsed="9.739043"/>
+<status status="PASS" start="2024-04-04T09:31:31.365614" elapsed="9.234928"/>
 </suite>
 <statistics>
 <total>
