@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-04T15:43:05.489787" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\test657\RobotFramework\pythonProject\tests">
+<suite id="s1-s1" name="Examples" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples">
+<suite id="s1-s1-s1" name="Elements" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements">
+<suite id="s1-s1-s1-s1" name="clickIt" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\clickIt.robot">
+<test id="s1-s1-s1-s1-t1" name="Verify Element Exist And Click On It" line="17">
+<kw name="Start the browser" owner="commonKeywordsPage" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-04-04T15:43:05.756465" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001A324C5DA90&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].${browser}Options()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-04-04T15:43:05.755429" elapsed="0.001036"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${browser}' == 'Firefox' and ${HEADLESS}</arg>
+<arg>Call Method</arg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>-headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-04T15:43:05.756465" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<arg>'${browser}' == 'Chrome' and ${HEADLESS}</arg>
+<arg>Call Method</arg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-04T15:43:05.756465" elapsed="0.000000"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2024-04-04T15:43:05.756465" elapsed="0.000000"/>
+</kw>
+<arg>'${browser}' == 'Chrome'</arg>
+<arg>Call Method</arg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-04T15:43:05.756465" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-04-04T15:43:05.758002" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>${browser}</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-04-04T15:43:05.758002" elapsed="1.887457"/>
+</kw>
+<status status="PASS" start="2024-04-04T15:43:05.755429" elapsed="1.890030"/>
+</kw>
+<kw name="Navigate to the buttons page" owner="clickItPage">
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-04-04T15:43:07.646966" level="INFO">https://demoqa.com/buttons</msg>
+<arg>${login_urlAddress}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-04-04T15:43:07.645459" elapsed="0.001507"/>
+</kw>
+<kw name="Navigate To Url And Verify" owner="navigateToUrlAndVerify">
+<msg time="2024-04-04T15:43:07.653313" level="INFO">Opening url 'https://demoqa.com/buttons'</msg>
+<arg>${login_urlAddress}</arg>
+<status status="PASS" start="2024-04-04T15:43:07.646966" elapsed="1.068571"/>
+</kw>
+<arg>${login_urlAddress}</arg>
+<doc>Navigates to the login page.</doc>
+<status status="PASS" start="2024-04-04T15:43:07.645459" elapsed="1.071085"/>
+</kw>
+<kw name="Verify element exist and click on it" owner="clickItPage">
+<kw name="Verify Element" owner="verifyElement">
+<arg>${clickButton}</arg>
+<status status="PASS" start="2024-04-04T15:43:08.716544" elapsed="0.011062"/>
+</kw>
+<kw name="Click It" owner="clickIt">
+<msg time="2024-04-04T15:43:08.734712" level="INFO">Clicking element 'xpath=(//*[contains(text(),'Click Me')])[3]'.</msg>
+<arg>${clickButton}</arg>
+<status status="PASS" start="2024-04-04T15:43:08.728117" elapsed="0.074405"/>
+</kw>
+<status status="PASS" start="2024-04-04T15:43:08.716544" elapsed="0.085978"/>
+</kw>
+<kw name="Kill Browser Session" owner="commonKeywordsPage" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-04-04T15:43:08.802522" elapsed="2.086564"/>
+</kw>
+<status status="PASS" start="2024-04-04T15:43:08.802522" elapsed="2.086564"/>
+</kw>
+<tag>clickIt</tag>
+<tag>elements</tag>
+<tag>examples</tag>
+<status status="PASS" start="2024-04-04T15:43:05.754921" elapsed="5.134165"/>
+</test>
+<doc>Verify element exist and click on it</doc>
+<status status="PASS" start="2024-04-04T15:43:05.512823" elapsed="5.376263"/>
+</suite>
+<status status="PASS" start="2024-04-04T15:43:05.511818" elapsed="5.378298"/>
+</suite>
+<status status="PASS" start="2024-04-04T15:43:05.510314" elapsed="5.379802"/>
+</suite>
+<status status="PASS" start="2024-04-04T15:43:05.499295" elapsed="5.391821"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">clickIt</stat>
+<stat pass="1" fail="0" skip="0">elements</stat>
+<stat pass="1" fail="0" skip="0">examples</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1" name="Examples">Tests.Examples</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Elements">Tests.Examples.Elements</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1-s1" name="clickIt">Tests.Examples.Elements.clickIt</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
