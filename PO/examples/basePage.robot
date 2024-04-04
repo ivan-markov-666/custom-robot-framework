@@ -4,3 +4,4 @@ Library          SeleniumLibrary
 Library          ../../keywords/verifyElement.py
 Library          ../../keywords/clickIt.py
 Library          ../../keywords/navigateToUrlAndVerify.py
+Library          ../../keywords/clickRadioButton.py
