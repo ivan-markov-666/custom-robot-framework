@@ -7,6 +7,7 @@ Settings:
 - Headless mode: Set to False for running the browser with GUI or True for running in headless mode.
 - Parallel execution: Set the number of tests to execute simultaneously.
 - Base URL: Provide the base URL for testing.
+- Implicit Wait Time: Provide the number of seconds to wait.
 
 Make sure to configure these settings according to your testing requirements.
 """
@@ -44,3 +45,7 @@ parallel_processes = 4
 # That's why it should be stored in the .env file.
 # Just make sure that you provide valid URL address in a string.
 baseUrl = os.getenv('BASE_URL')
+
+# Implicit Wait.
+# Just make sure that you are using a number value.
+implicitWait = 40

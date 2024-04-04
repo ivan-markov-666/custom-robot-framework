@@ -1,8 +1,7 @@
+# The "Settings" section defines configuration settings and setup instructions for the test suite or test cases.
 *** Settings ***
-Documentation
-...
-...
-Resource          ../basePage.robot
+Documentation     Page Object Model file for "element"    # "Documentation" provides an explanation of the purpose or functionality of this Robot file.
+Resource          ../basePage.robot                       # Includes basePage file
 
 
 # Declare global variables
@@ -10,6 +9,8 @@ Resource          ../basePage.robot
 # Locators
 ${userName_inputTextElement}           id:userName
 
+# The "*** Keywords ***" section defines custom keywords used in test cases.
+# These keywords encapsulate reusable functionality, allowing for modularity and easier maintenance of test cases.
 *** Keywords ***
 Navigate to the login page
     [Documentation]               Navigates to the login page.
