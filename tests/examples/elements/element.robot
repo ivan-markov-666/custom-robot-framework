@@ -5,11 +5,12 @@ Test Setup       Start the browser
 Test Teardown    Kill Browser Session
 Resource         ../../../PO/examples/elements/elementPage.robot
 Resource         ../../../PO/common_keywords/commonKeywordsPage.robot
+Variables        ../../../config/config.py
 
 # Declare global variables
 *** Variables ***
 # Testing Data
-${login_urlAddress}                    https://demoqa.com/login
+${login_urlAddress}                    ${baseUrl}/login
 
 *** Test Cases ***
 Verify Element Exist And It Is Only One In The DOM Three

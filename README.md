@@ -58,6 +58,8 @@ In that case ***2*** tests will be executed at the same time. Change that number
 If you are using PowerShell or Unix scripts, your reports will be generated in the "report" folder located in the projects root. Every one report will be placed in new folder named with current 'yyyy-mm-dd_hhmmss'.  
 If you are using Robot Framework commands for executing the tests - the report will be generated in the projects roots folder.
 
+### Configuration
+The boilerplate is using a Python file for configuration. For more details review the ```config/config.py``` file.
 
 pabot --processes 4 tests/examples/elements/
 
