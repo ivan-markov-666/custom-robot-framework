@@ -12,9 +12,17 @@ Variables        ../../config/config.py
 # browser
 ${browser}           ${usedBrowser}
 
+#*** Keywords ***
+#Start the browser
+#    Create Webdriver    ${browser}
+
 *** Keywords ***
 Start the browser
-    Create Webdriver    ${browser}
+    ${options}=    Evaluate    sys.modules['selenium.webdriver'].${browser}Options()    sys, selenium.webdriver
+    Run Keyword If    '${browser}' == 'Firefox' and ${HEADLESS}    Call Method    ${options}    add_argument    -headless
+    Run Keyword If    '${browser}' == 'Chrome' and ${HEADLESS}    Call Method    ${options}    add_argument    --headless
+    Run Keyword If    '${browser}' == 'Chrome'    Call Method    ${options}    add_argument    --disable-gpu
+    Create Webdriver    ${browser}    options=${options}
 
 Kill Browser Session
     Close Browser

@@ -1,0 +1,6 @@
+datasources:03d7fe41bc534f4e009502eca14d3062789a5472
+commandlineoptions:97d170e1550eee4afc0af065b78cda302a97674c
+suitesfrom:no-suites-from-option
+file:25d5b45af61bfe8987dc7bda2bead3b50fe77820
+--suite Elements.Element
+--suite Elements.clickIt

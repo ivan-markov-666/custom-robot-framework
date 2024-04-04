@@ -1,0 +1,36 @@
+==============================================================================
+Elements                                                                      
+==============================================================================
+Elements.clickIt :: Verify element exist and click on it                      
+==============================================================================
+Verify Element Exist And Click On It                                    
+  Traceback (most recent call last):
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\clickIt.robot:15
+    T:  Verify Element Exist And Click On It    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\clickIt.robot:17
+      Verify element exist and click on it    
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    File  C:\Users\test657\RobotFramework\pythonProject\PO\examples\elements\clickItPage.robot:22
+      Click It    ${clickButton}
+      |  ${clickButton} = xpath=(//*[contains(text(),'Click Me')])[3] (str)
+______________________________________________________________________________
+| FAIL |
+ElementClickInterceptedException: Message: Element <button id="hQoK8" class="btn btn-primary" type="button"> is not clickable at point (406,665) because another element <iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0"> obscures it
+Stacktrace:
+RemoteError@chrome://remote/content/shared/RemoteError.sys.mjs:8:8
+WebDriverError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:192:5
+ElementClickInterceptedError@chrome://remote/content/shared/webdriver/Errors.sys.mjs:336:5
+webdriverClickElement@chrome://remote/content/marionette/interaction.sys.mjs:176:11
+interaction.clickElement@chrome://remote/content/marionette/interaction.sys.mjs:135:11
+clickElement@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:204:29
+receiveMessage@chrome://remote/content/marionette/actors/MarionetteCommandsChild.sys.mjs:84:31
+------------------------------------------------------------------------------
+Elements.clickIt :: Verify element exist and click on it              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Elements                                                              | FAIL |
+1 test, 0 passed, 1 failed
+==============================================================================
+Output:  C:\Users\test657\RobotFramework\pythonProject\pabot_results\1\output.xml
