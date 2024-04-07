@@ -1,6 +1,6 @@
 ## About
-That repository contains custom boilerplate, that uses Robot Framework. It can be used for a one good start for every one project.  
-There is one test that shows best practices for automation testing including POM design pattern, randomly selected data for check boxes, radio buttons, drop-down lists, etc. and many more... for more details read that file.  
+That repository contains a custom boilerplate, that uses Robot Framework. It can be used as a good start for every project.  
+There is one test that shows best practices for automation testing including POM design pattern, randomly selected data for checkboxes, radio buttons, drop-down lists, etc. and many more... for more details read that file.  
 
 ## Structure
 ### Custom Keywords
@@ -20,7 +20,7 @@ You may need to change the policy for executing the scripts in the PowerShell is
 ```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned```  
 If you met a problem with the permissions, execute the command in PowerShell opened with Administrator rights.
 4. Install Anaconda
--   Create new conda environment
+-   Create new a conda environment
 -   Activate your conda environment.
 5. Add robotframework library
 > pip install robotframework
@@ -29,18 +29,18 @@ If you met a problem with the permissions, execute the command in PowerShell ope
 7. Add robotframework-seleniumlibrary
 > pip install robotframework-seleniumlibrary
 8. Use VS Code or PyCharm IDE
-9. Download all web drivers that you will use and add the path of folder contains the drivers into the environment variables.
+9. Download all web drivers that you will use and add the path of the folder containing the drivers into the environment variables.
 10. Download and install all browsers that you will use for testing.  
-That frame was tested only with Chrome and Firefox, for all other browsers you may need to make changes in following files:   
-```config/config.py``` - you will need to change the config for browser that you want to use.  
+That frame was tested only with Chrome and Firefox, for all other browsers you may need to make changes in the following files:   
+```config/config.py``` - you will need to change the config for the browser that you want to use.  
 ```PO/common_keywords/commonKeywordsPage.robot``` - you will need to add extra code for other browsers in the "Keywords" section.
-11. Go to the projects root folder and rename/copy ".env_EXAMPLE" file to ".env".  
+11. Go to the project's root folder and rename/copy ".env_EXAMPLE" file to ".env".  
 Open the ".env" file and provide all needed data (baseURL, etc.).
 
 ## Execution
 
 ### Commands for executing the tests:
-You should use a PowerShell or Bash scripts for executing the tests. You can find all scripts in ./scripts folder located in the project roots.  
+You should use a PowerShell or Bash script for executing the tests. You can find all scripts in the ./scripts folder located in the project roots.  
 For example if you want to start all tests related to the customKeywords from examples you should execute the 'run_all_customKeywords_tests' script.  
 #### Windows Example
 <ins>Execute tests NOT in parallel:</ins>
@@ -54,26 +54,26 @@ For example if you want to start all tests related to the customKeywords from ex
 
 <ins>Execute tests in parallel:</ins>
 > ./scripts/Unix/run_all_customKeywords_tests__parallel.sh
-- make sure that you made the file executable before running the script file.  
-To make your file executable use following command:
+- make sure that you make the file executable before running the script file.  
+To make your file executable use the following command:
 > chmod +x ./scripts/Unix/run_all_customKeywords_tests  
 > chmod +x ./scripts/Unix/run_all_customKeywords_tests__parallel
 #### Robot Framework approach examples
-However, you still can execute the tests by the Robot Framework way.  
+However, you still can execute the tests in the Robot Framework way.  
 <ins>Execute one test:</ins>
 > robot path/to/your/test.robot
 
 <ins>example:</ins>
 > robot tests/examples/customKeywords/element.robot 
 
-<ins>Execute tests in parallel - we are using "Pabot" library.</ins>
+<ins>Execute tests in parallel - we are using the "Pabot" library.</ins>
 > pabot --processes 2 path/to/your/tests
 
 In that case ***2*** tests will be executed at the same time. Change that number to increase the executing tests in parallel.
 
 <ins>example:</ins>  
-```robot --include customKeywords tests``` - this command will execute all tests that have "customKeywords" tag in their "Test Cases" section.  
-```robot --exinclude customKeywords tests``` - this command will execute all tests that DOESN'T have "customKeywords" tag in their "Test Case" section.
+```robot --include customKeywords tests``` - this command will execute all tests that have the "customKeywords" tag in their "Test Cases" section.  
+```robot --exinclude customKeywords tests``` - this command will execute all tests that DOESN'T have a "customKeywords" tag in their "Test Case" section.
 
 ### Suites
 The suites are just upgraded scripts. To use suites you can add 'Tags' in the tests. You can see an examples in ```C:\Users\test657\RobotFramework\pythonProject\tests\examples\customKeywords\element.robot``` and ```C:\Users\test657\RobotFramework\pythonProject\tests\examples\customKeywords\clickIt.robot``` tests.  
@@ -87,14 +87,14 @@ You can define your suites by adding options "--include [tag]" and "--exclude [t
 > ./scripts/PowerShell/run_all_customKeywords_tests_suite_example__parallel.ps1 
 
 #### Linux Example
-However, you still can execute the tests by the Robot Framework way. 
+However, you still can execute the tests in the Robot Framework way. 
 <ins>Execute tests NOT in parallel:</ins>
 > ./scripts/Unix/run_all_customKeywords_suite_example_tests.sh
 
 <ins>Execute tests in parallel:</ins>
 > ./scripts/Unix/run_all_customKeywords_tests_suite_example__parallel.sh
-- make sure that you made the file executable before running the script file.  
-To make your file executable use following command:
+- make sure that you make the file executable before running the script file.  
+To make your file executable use the following command:
 > chmod +x ./scripts/Unix/run_all_customKeywords_tests  
 > chmod +x ./scripts/Unix/run_all_customKeywords_tests_suite_example__parallel
 
@@ -106,15 +106,15 @@ To make your file executable use following command:
 > robot tests/examples/customKeywords/
 
 ## Reports
-If you are using PowerShell or Unix scripts, your reports will be generated in the "report" folder located in the projects root. Every one report will be placed in new folder named with current 'yyyy-mm-dd_hhmmss'.  
+If you are using PowerShell or Unix scripts, your reports will be generated in the "report" folder located in the project root. Every report will be placed in a new folder named with current 'yyyy-mm-dd_hhmmss'.  
 If you are using Robot Framework commands for executing the tests - the report will be generated in the projects roots folder.
 
 ## Configuration
 The boilerplate is using a Python file for configuration. For more details review the ```config/config.py``` file.
 
 ## Examples
-There are three kind of examples.
-1. There is example of the structure. For more details check the following files (please review that structure in text editor, not in the GitHub):  
+There are three kinds of examples.
+1. There is an example of the structure. For more details check the following files (please review that structure in a text editor, not in GitHub):  
 project-root/  
 ├── keywords/  
 │   └── example_structure/  
@@ -161,6 +161,6 @@ project-root/
 1. Add headless support for all browsers that can be used from Robot Framework.
 2. Test Unix scripts. The boilerplate was created in Windows OS.
 3. Add more comments.
-4. Add assertion example.
+4. Add an assertion example.
 5. Add Faker support.
-6. Define the full screen support in the config.py.
+6. Define the full-screen support in the config.py.
