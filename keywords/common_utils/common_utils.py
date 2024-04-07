@@ -1,4 +1,5 @@
 from robot.libraries.BuiltIn import BuiltIn
+from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 import os
 
@@ -99,3 +100,33 @@ class CommonUtils:
 
         # Return the count of elements
         return len(elements)
+
+    @staticmethod
+    def select_drop_down_option_by_text(dropdown_locator, option_locator):
+        # Get the instance of the SeleniumLibrary
+        selenium_lib = BuiltIn().get_library_instance('SeleniumLibrary')
+
+        # Click the dropdown to expand the options
+        selenium_lib.click_element(dropdown_locator)
+
+        # Optionally, wait for the dropdown options to be visible
+        selenium_lib.wait_until_element_is_visible(option_locator, timeout='5s')
+
+        # Click the option
+        selenium_lib.click_element(option_locator)
+
+    @staticmethod
+    def maximize_browser_window():
+        # Get the instance of the SeleniumLibrary
+        selenium_lib = BuiltIn().get_library_instance('SeleniumLibrary')
+
+        # Get the current browser window and maximize it
+        selenium_lib.driver.maximize_window()
+
+    @staticmethod
+    def scroll_down(pixels):
+        # Get the instance of the SeleniumLibrary
+        selenium_lib = BuiltIn().get_library_instance('SeleniumLibrary')
+
+        # Execute JavaScript to scroll down the page by the specified number of pixels
+        selenium_lib.driver.execute_script(f"window.scrollBy(0,{pixels});")

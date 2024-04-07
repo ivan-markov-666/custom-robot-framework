@@ -32,8 +32,6 @@ Verify Element Exist And Click On It
             Check random values from the 'Hobbies' check boxes
             Upload random 'image' using upload function                                           ${imageLocation}
             Fill in the 'Current Address' input text element with correct random data             ${currentAddress}
-#           Select a random value from the 'Select State' drop-down list
-#            Select a random value from the 'Select City' drop-down list
-#            Press the 'Submit' button
-#            Verify that all information was saved correctly
-            Sleep                                                                                  5s
+            Select a random value from the 'Select State' drop-down list
+            Select a random value from the 'Select City' drop-down list
+            Press the 'Submit' button

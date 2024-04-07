@@ -1,5 +1,6 @@
 ## About
 That repository contains custom boilerplate, that uses Robot Framework. It can be used for a one good start for every one project.  
+There is one test that shows best practices for automation testing including POM design pattern, randomly selected data for check boxes, radio buttons, drop-down lists, etc. and many more... for more details read that file.  
 
 ## Structure
 ### Custom Keywords
@@ -111,7 +112,56 @@ If you are using Robot Framework commands for executing the tests - the report w
 ## Configuration
 The boilerplate is using a Python file for configuration. For more details review the ```config/config.py``` file.
 
+## Examples
+There are three kind of examples.
+1. There is example of the structure. For more details check the following files:
+project-root/
+├── keywords/
+│   └── example_structure/
+│       ├── common_functions/
+│       │   └── common_functions.py
+│       └── custom_keyword.py
+├── PO/
+│   └── examples/
+│       └── example_structure/
+│           └── examplePage.robot
+└── tests/
+    └── examples/
+        └── example_structure/
+            └── exampleStructureSpec.robot
+2. There is examples (with comments) how to add custom keywords. For more details check the following files:
+project-root/
+├── keywords/
+│   ├── common_utils/
+│   │   └── common_utils.py
+│   ├── click.py
+│   └── element.py
+├── PO/
+│   └── examples/
+│       └── customKeywords/
+│           ├── clickItPage.robot
+│           └── elementPage.robot
+└── tests/
+    └── examples/
+        └── customKeywords/
+            ├── clickIt.robot
+            └── element.robot
+3. There is one real example. That example shows best practices for automation testing. For more details check the following files:
+project-root/
+├── PO/
+│   └── examples/
+│       └── realExample/
+│           └── practiceFormPage.robot
+└── tests/
+    └── examples/
+        └── realExample/
+            └── practiceForm.robot
+
+
 ## To Do:
 1. Add headless support for all browsers that can be used from Robot Framework.
 2. Test Unix scripts. The boilerplate was created in Windows OS.
-3. ***FIX ISSUE:*** For some reason some of the tests fails, when we are using PowerShell approach for executing the tests.
+3. Add more comments.
+4. Add assertion example.
+5. Add Faker support.
+6. Define the full screen support in the config.py.

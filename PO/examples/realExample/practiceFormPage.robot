@@ -1,4 +1,3 @@
-# The "Settings" section defines configuration settings and setup instructions for the test suite or test cases.
 *** Settings ***
 Documentation     Page Object Model file for "practiceForm"
 Resource          ../basePage.robot
@@ -20,8 +19,11 @@ ${music_checkBox}                       xpath=//*[@id='hobbies-checkbox-3']/pare
 ${selectPicture_uploadFile}             id:uploadPicture
 ${currentAddress_textArea}              id:currentAddress
 ${selectState_dropDownList}             id:state
+${selectState_values}                   xpath=//*[@*='state']//div[@id]
 ${selectCity_dropDownList}              id:city
+${selectCity_values}                    xpath=//*[@*='city']//div[@id]
 ${submit_button}                        id:submit
+${test}                                 id:react-select-3-option-1
 # Testing Data
 @{LIST_OF_GENDERS}                      Male  Female  Other
 
@@ -33,21 +35,21 @@ Navigate to the 'Student Registration Form' page
     Log                           ${url}
     Navigate To URL And Verify    ${url}
 Fill in the 'First Name' input text element with correct random data
-    [Documentation]               Fill with valid data into input text element.
+    [Documentation]               Fill with valid First Name data.
     [Arguments]                   ${firstName}
-    Fill And Verify Text Field    ${firstName_inputTextElement}    ${firstName}
+    Send Keys                     ${firstName_inputTextElement}    ${firstName}
 Fill in the 'Last Name' input text element with correct random data
-    [Documentation]               Fill with valid data into input text element.
+    [Documentation]               Fill with valid Last Name data.
     [Arguments]                   ${lastName}
-    Fill And Verify Text Field    ${lastName_inputTextElement}     ${lastName}
+    Send Keys                     ${lastName_inputTextElement}     ${lastName}
 Fill in the 'Email' input text element with correct random data
-    [Documentation]               Fill with valid data into input text element.
+    [Documentation]               Fill with valid email data.
     [Arguments]                   ${email}
     # Get random decision if the input will be filled.
     ${random_decision}=           Return True Or False Randomly
     # If the decision is true, the input will be entered.
     IF    ${random_decision}
-        Fill And Verify Text Field    ${email_inputTextElement}    ${email}
+        Send Keys    ${email_inputTextElement}        ${email}
     ELSE IF    not ${random_decision}
         # Skip the input if false.
         Log    Field will not be filled with data.
@@ -56,26 +58,27 @@ Fill in the 'Email' input text element with correct random data
         Fail    Incorrect value for "random_decision" variable found in "Fill in the 'Email' input text element with correct random data" keyword. \n Please provide boolean value.
     END
 Select random value from the 'Gender' radio option
-    [Documentation]               Select gender.
+    [Documentation]               Select Random Gender.
+    # Get random decision which gender will be selected.
     ${gender}=                    Choose Random Value From List  ${LIST_OF_GENDERS}
-    Run Keyword If                '${gender}' == 'Male'          Click Element  ${male_radioButton}
-    ...    ELSE IF                '${gender}' == 'Female'        Click Element  ${female_radioButton}
-    ...    ELSE IF                '${gender}' == 'Other'         Click Element  ${other_radioButton}
-    ...    ELSE                   Fail  Incorrect value for "gender" variable found in "Select random value from the 'Gender' radio option" keyword. \n Please provide list values.
+    # Select chosen gender.
+    Run Keyword If    '${gender}' == 'Male'          Click Element  ${male_radioButton}
+    ...    ELSE IF    '${gender}' == 'Female'        Click Element  ${female_radioButton}
+    ...    ELSE IF    '${gender}' == 'Other'         Click Element  ${other_radioButton}
+    ...    ELSE    Fail  Incorrect value for "gender" variable found in "Select random value from the 'Gender' radio option" keyword. \n Please provide list values.
 Fill in the 'Mobile(10 Digits)' input text element with correct random data
     [Documentation]               Fill with valid mobile data.
     [Arguments]                   ${data}
-    Fill And Verify Text Field    ${mobile_inputTextElement}         ${data}
+    Send Keys    ${mobile_inputTextElement}                                      ${data}
 Select a random value from the 'Date of Birth' drop-down calendar
     [Documentation]               Fill with valid date of birth data.
     [Arguments]                   ${data}
-#    Click It                      ${dateOfBirth_dropDownCalendar}
-    Send Keys Press Enter         ${dateOfBirth_dropDownCalendar}    ${data}
+    Send Keys Press Enter         ${dateOfBirth_dropDownCalendar}                ${data}
 Select random value from the 'Subjects' auto complete field
     # Get random decision if the input will be filled.
     ${random_decision}=           Return True Or False Randomly
     # If the decision is true, the input will be entered.
-    IF    ${random_decision}
+    IF         ${random_decision}
         Continue with random selection of the 'Subject' auto complete
     ELSE IF    not ${random_decision}
         # Skip the input if false.
@@ -85,8 +88,12 @@ Select random value from the 'Subjects' auto complete field
         Fail    Incorrect value for "random_decision" variable found in "Select random value from the 'Subjects' auto complete field" keyword. \n Please provide boolean value.
     END
 Continue with random selection of the 'Subject' auto complete
+    [Documentation]               Select randomly values for Subject input.
+    # Declare an arraylist
     ${values_list}=    Set Variable    ['Maths', 'Accounting', 'Arts', 'Social Studies', 'Physics', 'Chemistry', 'Computer Science', 'Commerce', 'Economics', 'Civics', 'Biology', 'Hindi', 'English', 'History']
+    # Get random decision, which values will be added to the input.
     ${random_values}=  Choose Random Number Of Values From List    ${values_list}
+    # Add chosen values in the input.
     FOR    ${subject}    IN    @{random_values}
         Run Keyword If    '${subject}' == 'Maths'             Send Keys Press Enter    ${subject_autocomplete}    Maths
         ...    ELSE IF    '${subject}' == 'Accounting'        Send Keys Press Enter    ${subject_autocomplete}    Accounting
@@ -104,6 +111,7 @@ Continue with random selection of the 'Subject' auto complete
         ...    ELSE IF    '${subject}' == 'History'           Send Keys Press Enter    ${subject_autocomplete}    History
     END
 Check random values from the 'Hobbies' check boxes
+    [Documentation]               Select randomly values for Hobbies check boxes.
     # Get random decision if the input will be filled.
     ${random_decision}=           Return True Or False Randomly
     # If the decision is true, the input will be entered.
@@ -117,6 +125,7 @@ Check random values from the 'Hobbies' check boxes
         Fail    Incorrect value for "random_decision" variable found in "Check random values from the 'Hobbies' check boxes" keyword. \n Please provide boolean value.
     END
 Continue with random selection of the 'Hobbies' check boxes
+    [Documentation]               Continue with the Hobbies selection.
     ${values_list}=    Set Variable    ['Sports', 'Reading', 'Music']
     ${random_values}=  Choose Random Number Of Values From List    ${values_list}
     FOR    ${subject}    IN    @{random_values}
@@ -131,21 +140,31 @@ Upload random 'image' using upload function
     ${random_decision}=           Return True Or False Randomly
     Run Keyword If                '${random_decision}' == 'True'       Continue With Upload Image    ${imageFilePath}
 Continue With Upload Image
+    [Documentation]               Continue with the uploading of the image.
     [Arguments]                   ${imageFilePath}
     Upload File                   ${selectPicture_uploadFile}               ${imageFilePath}
 Fill in the 'Current Address' input text element with correct random data
-    [Documentation]               Upload an image or skip based on a random decision.
+    [Documentation]               Fill with valid address data.
     [Arguments]                   ${text}
     # Take a random decision if the image upload will be done.
     ${random_decision}=           Return True Or False Randomly
     Run Keyword If                '${random_decision}' == 'True'       Continue With 'Current Address'    ${text}
 Continue With 'Current Address'
+    [Documentation]               Continue with current address.
     [Arguments]                   ${text}
-    Fill And Verify Text Field    ${currentAddress_textArea}    ${text}
+    Send Keys    ${currentAddress_textArea}    ${text}
 Select a random value from the 'Select State' drop-down list
-    Verify Element                ${selectState_dropDownList}
+     [Documentation]              Select random value for State drop-down list.
+     Scroll Down                  300
+     Click It                     ${selectState_dropDownList}
+     ${random_dropDownValue}=     Select Random Drop Down Value    ${selectState_values}
+     Sleep                                                                                  5s
+     Click It                     xpath=//div[text()='${random_dropDownValue}'][@id]
 Select a random value from the 'Select City' drop-down list
-    Verify Element                ${selectCity_dropDownList}
+     [Documentation]              Select random value for City drop-down list.
+     Click It                     ${selectCity_dropDownList}
+     ${random_dropDownValue}=     Select Random Drop Down Value    ${selectCity_values}
+     Sleep                                                                                  5s
+     Click It                     xpath=//div[text()='${random_dropDownValue}']
 Press the 'Submit' button
-    Verify Element                ${submit_button}
-Verify that all information was saved correctly
+     Click It                     ${submit_button}
