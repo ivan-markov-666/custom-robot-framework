@@ -33,30 +33,30 @@ Open the ".env" file and provide all needed data (baseURL, etc.).
 
 ### Commands for executing the tests:
 You should use a PowerShell or Bash scripts for executing the tests. You can find all scripts in ./scripts folder located in the project roots.  
-For example if you want to start all tests related to the elements from examples you should execute the 'run_all_elements_tests' script.  
+For example if you want to start all tests related to the customKeywords from examples you should execute the 'run_all_customKeywords_tests' script.  
 #### Windows Example
 <ins>Execute tests NOT in parallel:</ins>
-> ./scripts/PowerShell/run_all_elements_tests.ps1  
+> ./scripts/PowerShell/run_all_customKeywords_tests.ps1  
 
 <ins>Execute tests in parallel:</ins>
-> ./scripts/PowerShell/run_all_elements_tests__parallel.ps1  
+> ./scripts/PowerShell/run_all_customKeywords_tests__parallel.ps1  
 #### Linux Example
 <ins>Execute tests NOT in parallel:</ins>
-> ./scripts/Unix/run_all_elements_tests.sh
+> ./scripts/Unix/run_all_customKeywords_tests.sh
 
 <ins>Execute tests in parallel:</ins>
-> ./scripts/Unix/run_all_elements_tests__parallel.sh
+> ./scripts/Unix/run_all_customKeywords_tests__parallel.sh
 - make sure that you made the file executable before running the script file.  
 To make your file executable use following command:
-> chmod +x ./scripts/Unix/run_all_elements_tests  
-> chmod +x ./scripts/Unix/run_all_elements_tests__parallel
+> chmod +x ./scripts/Unix/run_all_customKeywords_tests  
+> chmod +x ./scripts/Unix/run_all_customKeywords_tests__parallel
 #### Robot Framework approach examples
 However, you still can execute the tests by the Robot Framework way.  
 <ins>Execute one test:</ins>
 > robot path/to/your/test.robot
 
 <ins>example:</ins>
-> robot tests/examples/elements/element.robot 
+> robot tests/examples/customKeywords/element.robot 
 
 <ins>Execute tests in parallel - we are using "Pabot" library.</ins>
 > pabot --processes 2 path/to/your/tests
@@ -64,38 +64,38 @@ However, you still can execute the tests by the Robot Framework way.
 In that case ***2*** tests will be executed at the same time. Change that number to increase the executing tests in parallel.
 
 <ins>example:</ins>  
-```robot --include elements tests``` - this command will execute all tests that have "elements" tag in their "Test Cases" section.  
-```robot --exinclude elements tests``` - this command will execute all tests that DOESN'T have "elements" tag in their "Test Case" section.
+```robot --include customKeywords tests``` - this command will execute all tests that have "customKeywords" tag in their "Test Cases" section.  
+```robot --exinclude customKeywords tests``` - this command will execute all tests that DOESN'T have "customKeywords" tag in their "Test Case" section.
 
 ### Suites
-The suites are just upgraded scripts. To use suites you can add 'Tags' in the tests. You can see an examples in ```C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\element.robot``` and ```C:\Users\test657\RobotFramework\pythonProject\tests\examples\elements\clickIt.robot``` tests.  
+The suites are just upgraded scripts. To use suites you can add 'Tags' in the tests. You can see an examples in ```C:\Users\test657\RobotFramework\pythonProject\tests\examples\customKeywords\element.robot``` and ```C:\Users\test657\RobotFramework\pythonProject\tests\examples\customKeywords\clickIt.robot``` tests.  
 You can define your suites by adding options "--include [tag]" and "--exclude [tag]" to your executing command.
 
 #### Windows Example
 <ins>Execute suite NOT in parallel:</ins>
-> ./scripts/PowerShell/run_all_elements_tests_suite_example.ps1  
+> ./scripts/PowerShell/run_all_customKeywords_tests_suite_example.ps1  
 
 <ins>Execute tests in parallel:</ins>
-> ./scripts/PowerShell/run_all_elements_tests_suite_example__parallel.ps1 
+> ./scripts/PowerShell/run_all_customKeywords_tests_suite_example__parallel.ps1 
 
 #### Linux Example
 However, you still can execute the tests by the Robot Framework way. 
 <ins>Execute tests NOT in parallel:</ins>
-> ./scripts/Unix/run_all_elements_suite_example_tests.sh
+> ./scripts/Unix/run_all_customKeywords_suite_example_tests.sh
 
 <ins>Execute tests in parallel:</ins>
-> ./scripts/Unix/run_all_elements_tests_suite_example__parallel.sh
+> ./scripts/Unix/run_all_customKeywords_tests_suite_example__parallel.sh
 - make sure that you made the file executable before running the script file.  
 To make your file executable use following command:
-> chmod +x ./scripts/Unix/run_all_elements_tests  
-> chmod +x ./scripts/Unix/run_all_elements_tests_suite_example__parallel
+> chmod +x ./scripts/Unix/run_all_customKeywords_tests  
+> chmod +x ./scripts/Unix/run_all_customKeywords_tests_suite_example__parallel
 
 #### Robot Framework approach example
 <ins>Execute all tests in one folder:</ins>
 > robot path/to/your/folder/tests
 
 <ins>example:</ins>
-> robot tests/examples/elements/
+> robot tests/examples/customKeywords/
 
 ## Reports
 If you are using PowerShell or Unix scripts, your reports will be generated in the "report" folder located in the projects root. Every one report will be placed in new folder named with current 'yyyy-mm-dd_hhmmss'.  

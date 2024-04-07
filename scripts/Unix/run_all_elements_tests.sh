@@ -14,4 +14,4 @@ ensure_folder_exists "$globalReportFolder"
 reportFolder="$globalReportFolder/$(date +%Y-%m-%d_%H%M%S)_reports"
 
 # Executing Robot Framework tests
-robot -d "$reportFolder" "$projectRoot/tests/examples/elements/"
+robot -d "$reportFolder" "$projectRoot/tests/examples/customKeywords/"

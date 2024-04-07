@@ -20,7 +20,7 @@ def navigate_to_url_and_verify(url):
     # Get the instance of the SeleniumLibrary
     selenium_lib = BuiltIn().get_library_instance('SeleniumLibrary')
 
-    # Използване на стойността на implicitWait от config.py
+    # Using the implicitWait value from the config.py file.
     selenium_lib.set_selenium_implicit_wait(config.implicitWait)
 
     # Navigate to the specified URL

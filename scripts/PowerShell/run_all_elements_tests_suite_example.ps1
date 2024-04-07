@@ -6,4 +6,4 @@ $reportPath = Join-Path $PSScriptRoot -ChildPath "..\..\..\report"
 Ensure-FolderExists -Path $reportPath
 
 $reportFolder = "report/" + (Get-Date -Format "yyyy-MM-dd_HHmmss")
-robot -d $reportFolder --include elements tests/
+robot -d $reportFolder --include customKeywords tests/
