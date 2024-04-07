@@ -2,6 +2,7 @@ from robot.api.deco import keyword
 from robot.libraries.BuiltIn import BuiltIn
 from common_utils.common_utils import CommonUtils
 
+
 # Keyword for clicking on an element
 @keyword
 def click_it(locator):

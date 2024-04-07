@@ -1,8 +1,14 @@
 from robot.api.deco import keyword
 from robot.libraries.BuiltIn import BuiltIn
-from config.config import implicitWait
 import validators
+import sys
+import os
 
+# Adding the directory where config.py is located to sys.path
+sys.path.append(os.path.abspath(os.path.join(__file__, "../../config")))
+
+# Importing the config file
+import config
 
 # Define a custom keyword using the @keyword decorator
 @keyword
@@ -14,8 +20,8 @@ def navigate_to_url_and_verify(url):
     # Get the instance of the SeleniumLibrary
     selenium_lib = BuiltIn().get_library_instance('SeleniumLibrary')
 
-    # Set implicit wait to 40 seconds
-    selenium_lib.set_selenium_implicit_wait(implicitWait)
+    # Using the implicitWait value from the config.py file.
+    selenium_lib.set_selenium_implicit_wait(config.implicitWait)
 
     # Navigate to the specified URL
     selenium_lib.go_to(url)

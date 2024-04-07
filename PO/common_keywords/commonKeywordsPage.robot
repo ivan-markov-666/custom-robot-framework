@@ -6,6 +6,7 @@ Documentation    A resource file with reusable keywords and variables.         #
 ...              domain specific language. They utilize keywords provided
 ...              by the imported SeleniumLibrary.
 Library          SeleniumLibrary                                               # Includes the SeleniumLibrary which provides keywords for web testing
+Library          ../../keywords/browser.py
 Variables        ../../config/config.py                                        # Imports variables from a Python config file
 
 # Declare global variables
@@ -21,6 +22,7 @@ Start the browser
     Run Keyword If    '${browser}' == 'Chrome' and ${HEADLESS}    Call Method    ${options}    add_argument    --headless
     Run Keyword If    '${browser}' == 'Chrome'    Call Method    ${options}    add_argument    --disable-gpu
     Create Webdriver    ${browser}    options=${options}
+    Full Screen
 
 Kill Browser Session
     Close Browser

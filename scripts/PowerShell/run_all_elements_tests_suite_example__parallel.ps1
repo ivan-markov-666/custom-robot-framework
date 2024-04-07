@@ -20,4 +20,4 @@ $processes = python -c $pythonCode
 $reportFolder = "report/" + (Get-Date -Format "yyyy-MM-dd_HHmmss")
 
 # Executing pabot with the number of processes read from the configuration file
-pabot --processes $processes --outputdir $reportFolder --include elements tests/
+pabot --processes $processes --outputdir $reportFolder --include customKeywords tests/

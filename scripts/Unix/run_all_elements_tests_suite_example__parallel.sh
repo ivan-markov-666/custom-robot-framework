@@ -14,4 +14,4 @@ reportFolder="$globalReportFolder/$(date +%Y-%m-%d_%H%M%S)_reports"
 PARALLEL_PROCESSES=$(python -c "import sys; sys.path.append('$(dirname "$(dirname "$0")")/config'); import config; print(config.parallel_processes)")
 
 # Starts pabot with the specified number of processes and the specified tag
-pabot --processes $PARALLEL_PROCESSES --outputdir $reportFolder --include elements tests/
+pabot --processes $PARALLEL_PROCESSES --outputdir $reportFolder --include customKeywords tests/

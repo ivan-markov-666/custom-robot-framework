@@ -11,4 +11,4 @@ ensure_folder_exists "$globalReportFolder"
 reportFolder="$globalReportFolder/$(date +%Y-%m-%d_%H%M%S)_reports"
 
 # Starts Robot Framework with the specified tag
-robot -d $reportFolder --include elements tests/
+robot -d $reportFolder --include customKeywords tests/
