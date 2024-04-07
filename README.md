@@ -18,15 +18,22 @@ Only files related to test ```clickIt``` and ```element``` have detailed comment
 You may need to change the policy for executing the scripts in the PowerShell is you get an error. To change the policy type the following command in your terminal:
 ```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned```  
 If you met a problem with the permissions, execute the command in PowerShell opened with Administrator rights.
-4. Add robotframework library
-5. Add selenium library
-6. Use VS Code or PyCharm IDE
-7. Download all web drivers that you will use and add the path of folder contains the drivers into the environment variables.
-8. Download and install all browsers that you will use for testing.  
+4. Install Anaconda
+-   Create new conda environment
+-   Activate your conda environment.
+5. Add robotframework library
+> pip install robotframework
+6. Add selenium library
+> pip install robotframework-seleniumlibrary
+7. Add robotframework-seleniumlibrary
+> pip install robotframework-seleniumlibrary
+8. Use VS Code or PyCharm IDE
+9. Download all web drivers that you will use and add the path of folder contains the drivers into the environment variables.
+10. Download and install all browsers that you will use for testing.  
 That frame was tested only with Chrome and Firefox, for all other browsers you may need to make changes in following files:   
 ```config/config.py``` - you will need to change the config for browser that you want to use.  
 ```PO/common_keywords/commonKeywordsPage.robot``` - you will need to add extra code for other browsers in the "Keywords" section.
-9. Go to the projects root folder and rename/copy ".env_EXAMPLE" file to ".env".  
+11. Go to the projects root folder and rename/copy ".env_EXAMPLE" file to ".env".  
 Open the ".env" file and provide all needed data (baseURL, etc.).
 
 ## Execution

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-04-07T16:12:30.719506" rpa="false" schemaversion="5">
-<suite id="s1" name="practiceForm" source="C:\Users\test657\RobotFramework\pythonProject\tests\examples\realExample\practiceForm.robot">
+<robot generator="Robot 7.0 (Python 3.11.7 on win32)" generated="2024-04-07T19:02:30.682438" rpa="false" schemaversion="5">
+<suite id="s1" name="practiceForm" source="C:\Users\ivanm\Desktop\robotFramework\custom-robot-framework\tests\examples\realExample\practiceForm.robot">
 <test id="s1-t1" name="Verify Element Exist And Click On It" line="22">
 <kw name="Start the browser" owner="commonKeywordsPage" type="SETUP">
 <kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-04-07T16:12:30.921189" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x0000020D8EAC9BB0&gt;</msg>
+<msg time="2024-04-07T19:02:30.973721" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000001D75595C3D0&gt;</msg>
 <var>${options}</var>
 <arg>sys.modules['selenium.webdriver'].${browser}Options()</arg>
 <arg>sys, selenium.webdriver</arg>
 <doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-04-07T16:12:30.920189" elapsed="0.001000"/>
+<status status="PASS" start="2024-04-07T19:02:30.973721" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>'${browser}' == 'Firefox' and ${HEADLESS}</arg>
@@ -18,7 +18,7 @@
 <arg>add_argument</arg>
 <arg>-headless</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-07T16:12:30.921189" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:30.973721" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <arg>'${browser}' == 'Chrome' and ${HEADLESS}</arg>
@@ -27,7 +27,7 @@
 <arg>add_argument</arg>
 <arg>--headless</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-07T16:12:30.921189" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:30.973721" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Call Method" owner="BuiltIn">
@@ -35,7 +35,7 @@
 <arg>add_argument</arg>
 <arg>--disable-gpu</arg>
 <doc>Calls the named method of the given object with the provided arguments.</doc>
-<status status="PASS" start="2024-04-07T16:12:30.922189" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:30.973721" elapsed="0.000000"/>
 </kw>
 <arg>'${browser}' == 'Chrome'</arg>
 <arg>Call Method</arg>
@@ -43,106 +43,106 @@
 <arg>add_argument</arg>
 <arg>--disable-gpu</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-07T16:12:30.922189" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:30.973721" elapsed="0.000000"/>
 </kw>
 <kw name="Create Webdriver" owner="SeleniumLibrary">
-<msg time="2024-04-07T16:12:30.922189" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<msg time="2024-04-07T19:02:30.973721" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
 <arg>${browser}</arg>
 <arg>options=${options}</arg>
 <doc>Creates an instance of Selenium WebDriver.</doc>
-<status status="PASS" start="2024-04-07T16:12:30.922189" elapsed="1.567326"/>
+<status status="PASS" start="2024-04-07T19:02:30.973721" elapsed="1.360707"/>
 </kw>
-<status status="PASS" start="2024-04-07T16:12:30.920189" elapsed="1.569326"/>
+<status status="PASS" start="2024-04-07T19:02:30.973721" elapsed="1.360707"/>
 </kw>
 <kw name="Navigate to the 'Student Registration Form' page" owner="practiceFormPage">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-07T16:12:32.490515" level="INFO">https://demoqa.com/automation-practice-form</msg>
+<msg time="2024-04-07T19:02:32.334428" level="INFO">https://demoqa.com/automation-practice-form</msg>
 <arg>${url}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-07T16:12:32.490515" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:32.334428" elapsed="0.000000"/>
 </kw>
 <kw name="Navigate To Url And Verify" owner="navigateToUrlAndVerify">
-<msg time="2024-04-07T16:12:32.497516" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
+<msg time="2024-04-07T19:02:32.334428" level="INFO">Opening url 'https://demoqa.com/automation-practice-form'</msg>
 <arg>${url}</arg>
-<status status="PASS" start="2024-04-07T16:12:32.490515" elapsed="1.194077"/>
+<status status="PASS" start="2024-04-07T19:02:32.334428" elapsed="3.043943"/>
 </kw>
 <arg>${login_urlAddress}</arg>
 <doc>Navigates to the 'Student Registration' page.</doc>
-<status status="PASS" start="2024-04-07T16:12:32.489515" elapsed="1.195077"/>
+<status status="PASS" start="2024-04-07T19:02:32.334428" elapsed="3.043943"/>
 </kw>
 <kw name="Fill in the 'First Name' input text element with correct random data" owner="practiceFormPage">
 <kw name="Fill And Verify Text Field" owner="sendKeys">
-<msg time="2024-04-07T16:12:33.701627" level="INFO">Clicking element 'id:firstName'.</msg>
+<msg time="2024-04-07T19:02:35.384040" level="INFO">Clicking element 'id:firstName'.</msg>
 <arg>${firstName_inputTextElement}</arg>
 <arg>${firstName}</arg>
-<status status="PASS" start="2024-04-07T16:12:33.685592" elapsed="0.188317"/>
+<status status="PASS" start="2024-04-07T19:02:35.379664" elapsed="0.151207"/>
 </kw>
 <arg>${firstName}</arg>
 <doc>Fill with valid data into input text element.</doc>
-<status status="PASS" start="2024-04-07T16:12:33.685592" elapsed="0.188317"/>
+<status status="PASS" start="2024-04-07T19:02:35.379664" elapsed="0.151207"/>
 </kw>
 <kw name="Fill in the 'Last Name' input text element with correct random data" owner="practiceFormPage">
 <kw name="Fill And Verify Text Field" owner="sendKeys">
-<msg time="2024-04-07T16:12:33.882910" level="INFO">Clicking element 'id:lastName'.</msg>
+<msg time="2024-04-07T19:02:35.536456" level="INFO">Clicking element 'id:lastName'.</msg>
 <arg>${lastName_inputTextElement}</arg>
 <arg>${lastName}</arg>
-<status status="PASS" start="2024-04-07T16:12:33.874908" elapsed="0.236473"/>
+<status status="PASS" start="2024-04-07T19:02:35.530871" elapsed="0.131096"/>
 </kw>
 <arg>${lastName}</arg>
 <doc>Fill with valid data into input text element.</doc>
-<status status="PASS" start="2024-04-07T16:12:33.873909" elapsed="0.237472"/>
+<status status="PASS" start="2024-04-07T19:02:35.530871" elapsed="0.131096"/>
 </kw>
 <kw name="Fill in the 'Email' input text element with correct random data" owner="practiceFormPage">
 <kw name="Return True Or False Randomly" owner="randomDecision">
-<msg time="2024-04-07T16:12:34.112380" level="INFO">${random_decision} = True</msg>
+<msg time="2024-04-07T19:02:35.666619" level="INFO">${random_decision} = False</msg>
 <var>${random_decision}</var>
-<status status="PASS" start="2024-04-07T16:12:34.112380" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:35.666619" elapsed="0.000000"/>
 </kw>
 <if>
 <branch type="IF" condition="${random_decision}">
 <kw name="Fill And Verify Text Field" owner="sendKeys">
-<msg time="2024-04-07T16:12:34.120890" level="INFO">Clicking element 'id:userEmail'.</msg>
 <arg>${email_inputTextElement}</arg>
 <arg>${email}</arg>
-<status status="PASS" start="2024-04-07T16:12:34.112380" elapsed="0.246783"/>
+<status status="NOT RUN" start="2024-04-07T19:02:35.666619" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-04-07T16:12:34.112380" elapsed="0.246783"/>
+<status status="NOT RUN" start="2024-04-07T19:02:35.666619" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE IF" condition="not ${random_decision}">
 <kw name="Log" owner="BuiltIn">
+<msg time="2024-04-07T19:02:35.666619" level="INFO">Field will not be filled with data.</msg>
 <arg>Field will not be filled with data.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-04-07T16:12:34.359163" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:35.666619" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-04-07T16:12:34.359163" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:35.666619" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Fail" owner="BuiltIn">
 <arg>Incorrect value for "random_decision" variable found in "Fill in the 'Email' input text element with correct random data" keyword. \n Please provide boolean value.</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2024-04-07T16:12:34.359163" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-04-07T19:02:35.666619" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-04-07T16:12:34.359163" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-04-07T19:02:35.666619" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-04-07T16:12:34.112380" elapsed="0.246783"/>
+<status status="PASS" start="2024-04-07T19:02:35.666619" elapsed="0.000000"/>
 </if>
 <arg>${email}</arg>
 <doc>Fill with valid data into input text element.</doc>
-<status status="PASS" start="2024-04-07T16:12:34.111381" elapsed="0.247782"/>
+<status status="PASS" start="2024-04-07T19:02:35.666619" elapsed="0.000000"/>
 </kw>
 <kw name="Select random value from the 'Gender' radio option" owner="practiceFormPage">
 <kw name="Choose Random Value From List" owner="randomDecision">
-<msg time="2024-04-07T16:12:34.360162" level="INFO">${gender} = Female</msg>
+<msg time="2024-04-07T19:02:35.666619" level="INFO">${gender} = Female</msg>
 <var>${gender}</var>
 <arg>${LIST_OF_GENDERS}</arg>
-<status status="PASS" start="2024-04-07T16:12:34.360162" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:35.666619" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-07T16:12:34.361161" level="INFO">Clicking element 'xpath=//*[@id='gender-radio-2']/parent::div'.</msg>
+<msg time="2024-04-07T19:02:35.669126" level="INFO">Clicking element 'xpath=//*[@id='gender-radio-2']/parent::div'.</msg>
 <arg>${female_radioButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-07T16:12:34.360162" elapsed="0.048258"/>
+<status status="PASS" start="2024-04-07T19:02:35.669126" elapsed="0.055216"/>
 </kw>
 <arg>'${gender}' == 'Male'</arg>
 <arg>Click Element</arg>
@@ -159,174 +159,1251 @@
 <arg>Fail</arg>
 <arg>Incorrect value for "gender" variable found in "Select random value from the 'Gender' radio option" keyword. \n Please provide list values.</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-07T16:12:34.360162" elapsed="0.049258"/>
+<status status="PASS" start="2024-04-07T19:02:35.666619" elapsed="0.057723"/>
 </kw>
 <doc>Select gender.</doc>
-<status status="PASS" start="2024-04-07T16:12:34.360162" elapsed="0.049258"/>
+<status status="PASS" start="2024-04-07T19:02:35.666619" elapsed="0.057723"/>
 </kw>
 <kw name="Fill in the 'Mobile(10 Digits)' input text element with correct random data" owner="practiceFormPage">
 <kw name="Fill And Verify Text Field" owner="sendKeys">
-<msg time="2024-04-07T16:12:34.419930" level="INFO">Clicking element 'id:userNumber'.</msg>
+<msg time="2024-04-07T19:02:35.737123" level="INFO">Clicking element 'id:userNumber'.</msg>
 <arg>${mobile_inputTextElement}</arg>
 <arg>${data}</arg>
-<status status="PASS" start="2024-04-07T16:12:34.409420" elapsed="0.257517"/>
+<status status="PASS" start="2024-04-07T19:02:35.724342" elapsed="0.161060"/>
 </kw>
 <arg>${mobileNumber}</arg>
 <doc>Fill with valid mobile data.</doc>
-<status status="PASS" start="2024-04-07T16:12:34.409420" elapsed="0.257517"/>
+<status status="PASS" start="2024-04-07T19:02:35.724342" elapsed="0.161060"/>
 </kw>
 <kw name="Select a random value from the 'Date of Birth' drop-down calendar" owner="practiceFormPage">
 <kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
-<msg time="2024-04-07T16:12:34.675940" level="INFO">Clicking element 'xpath=(//*[@id='dateOfBirth']/div)[1]/div/input'.</msg>
+<msg time="2024-04-07T19:02:35.892332" level="INFO">Clicking element 'xpath=(//*[@id='dateOfBirth']/div)[1]/div/input'.</msg>
 <arg>${dateOfBirth_dropDownCalendar}</arg>
 <arg>${data}</arg>
-<status status="PASS" start="2024-04-07T16:12:34.666937" elapsed="0.331223"/>
+<status status="PASS" start="2024-04-07T19:02:35.885402" elapsed="0.221402"/>
 </kw>
 <arg>${dateOfBirth}</arg>
 <doc>Fill with valid date of birth data.</doc>
-<status status="PASS" start="2024-04-07T16:12:34.666937" elapsed="0.332223"/>
+<status status="PASS" start="2024-04-07T19:02:35.885402" elapsed="0.221402"/>
 </kw>
 <kw name="Select random value from the 'Subjects' auto complete field" owner="practiceFormPage">
 <kw name="Return True Or False Randomly" owner="randomDecision">
-<msg time="2024-04-07T16:12:34.999160" level="INFO">${random_decision} = False</msg>
+<msg time="2024-04-07T19:02:36.106804" level="INFO">${random_decision} = True</msg>
 <var>${random_decision}</var>
-<status status="PASS" start="2024-04-07T16:12:34.999160" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:36.106804" elapsed="0.000000"/>
 </kw>
 <if>
 <branch type="IF" condition="${random_decision}">
 <kw name="Continue with random selection of the 'Subject' auto complete" owner="practiceFormPage">
-<status status="NOT RUN" start="2024-04-07T16:12:35.000158" elapsed="0.000000"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-04-07T19:02:36.106804" level="INFO">${values_list} = ['Maths', 'Accounting', 'Arts', 'Social Studies', 'Physics', 'Chemistry', 'Computer Science', 'Commerce', 'Economics', 'Civics', 'Biology', 'Hindi', 'English', 'History']</msg>
+<var>${values_list}</var>
+<arg>['Maths', 'Accounting', 'Arts', 'Social Studies', 'Physics', 'Chemistry', 'Computer Science', 'Commerce', 'Economics', 'Civics', 'Biology', 'Hindi', 'English', 'History']</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-04-07T19:02:36.106804" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-04-07T16:12:34.999160" elapsed="0.000998"/>
+<kw name="Choose Random Number Of Values From List" owner="randomDecision">
+<msg time="2024-04-07T19:02:36.106804" level="INFO">${random_values} = ['Civics', 'Arts', 'Computer Science', 'English', 'Chemistry', 'Biology', 'Accounting', 'History', 'Social Studies', 'Hindi', 'Maths', 'Physics', 'Economics']</msg>
+<var>${random_values}</var>
+<arg>${values_list}</arg>
+<status status="PASS" start="2024-04-07T19:02:36.106804" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:36.119479" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<status status="PASS" start="2024-04-07T19:02:36.106804" elapsed="0.143406"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:36.106804" elapsed="0.143406"/>
+</kw>
+<var name="${subject}">Civics</var>
+<status status="PASS" start="2024-04-07T19:02:36.106804" elapsed="0.143406"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:36.262333" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<status status="PASS" start="2024-04-07T19:02:36.250210" elapsed="0.107912"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:36.250210" elapsed="0.107912"/>
+</kw>
+<var name="${subject}">Arts</var>
+<status status="PASS" start="2024-04-07T19:02:36.250210" elapsed="0.107912"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:36.365646" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<status status="PASS" start="2024-04-07T19:02:36.364152" elapsed="0.152952"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:36.358122" elapsed="0.158982"/>
+</kw>
+<var name="${subject}">Computer Science</var>
+<status status="PASS" start="2024-04-07T19:02:36.358122" elapsed="0.158982"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:36.517104" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<status status="PASS" start="2024-04-07T19:02:36.517104" elapsed="0.123121"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:36.517104" elapsed="0.123547"/>
+</kw>
+<var name="${subject}">English</var>
+<status status="PASS" start="2024-04-07T19:02:36.517104" elapsed="0.123547"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:36.643335" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<status status="PASS" start="2024-04-07T19:02:36.641248" elapsed="0.128163"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:36.641248" elapsed="0.128163"/>
+</kw>
+<var name="${subject}">Chemistry</var>
+<status status="PASS" start="2024-04-07T19:02:36.641248" elapsed="0.128163"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:36.781173" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<status status="PASS" start="2024-04-07T19:02:36.769411" elapsed="0.141209"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:36.769411" elapsed="0.141209"/>
+</kw>
+<var name="${subject}">Biology</var>
+<status status="PASS" start="2024-04-07T19:02:36.769411" elapsed="0.141209"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:36.916176" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<status status="PASS" start="2024-04-07T19:02:36.912275" elapsed="0.118645"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:36.912275" elapsed="0.118645"/>
+</kw>
+<var name="${subject}">Accounting</var>
+<status status="PASS" start="2024-04-07T19:02:36.910620" elapsed="0.120300"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:37.039055" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<status status="PASS" start="2024-04-07T19:02:37.030920" elapsed="0.132609"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:37.030920" elapsed="0.132609"/>
+</kw>
+<var name="${subject}">History</var>
+<status status="PASS" start="2024-04-07T19:02:37.030920" elapsed="0.132609"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:37.168974" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<status status="PASS" start="2024-04-07T19:02:37.165947" elapsed="0.134475"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:37.163529" elapsed="0.136893"/>
+</kw>
+<var name="${subject}">Social Studies</var>
+<status status="PASS" start="2024-04-07T19:02:37.163529" elapsed="0.136893"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:37.311621" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<status status="PASS" start="2024-04-07T19:02:37.300422" elapsed="0.113949"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:37.300422" elapsed="0.113949"/>
+</kw>
+<var name="${subject}">Hindi</var>
+<status status="PASS" start="2024-04-07T19:02:37.300422" elapsed="0.113949"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:37.425804" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<status status="PASS" start="2024-04-07T19:02:37.414371" elapsed="0.118485"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:37.414371" elapsed="0.118485"/>
+</kw>
+<var name="${subject}">Maths</var>
+<status status="PASS" start="2024-04-07T19:02:37.414371" elapsed="0.118485"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:37.544862" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<status status="PASS" start="2024-04-07T19:02:37.532856" elapsed="0.144271"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:37.532856" elapsed="0.144271"/>
+</kw>
+<var name="${subject}">Physics</var>
+<status status="PASS" start="2024-04-07T19:02:37.532856" elapsed="0.144271"/>
+</iter>
+<iter>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Send Keys Press Enter" owner="sendKeysAndPressEnter">
+<msg time="2024-04-07T19:02:37.685153" level="INFO">Clicking element 'id:subjectsInput'.</msg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<status status="PASS" start="2024-04-07T19:02:37.678154" elapsed="0.125871"/>
+</kw>
+<arg>'${subject}' == 'Maths'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Maths</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Accounting'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Accounting</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Arts'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Arts</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Social Studies'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Social Studies</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Physics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Physics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Chemistry'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Chemistry</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Computer Science'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Computer Science</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Commerce'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Commerce</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Economics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Economics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Civics'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Civics</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Biology'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Biology</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'Hindi'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>Hindi</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'English'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>English</arg>
+<arg>ELSE IF</arg>
+<arg>'${subject}' == 'History'</arg>
+<arg>Send Keys Press Enter</arg>
+<arg>${subject_autocomplete}</arg>
+<arg>History</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-04-07T19:02:37.677787" elapsed="0.126238"/>
+</kw>
+<var name="${subject}">Economics</var>
+<status status="PASS" start="2024-04-07T19:02:37.677631" elapsed="0.126394"/>
+</iter>
+<var>${subject}</var>
+<value>@{random_values}</value>
+<status status="PASS" start="2024-04-07T19:02:36.106804" elapsed="1.697221"/>
+</for>
+<status status="PASS" start="2024-04-07T19:02:36.106804" elapsed="1.697221"/>
+</kw>
+<status status="PASS" start="2024-04-07T19:02:36.106804" elapsed="1.697221"/>
 </branch>
 <branch type="ELSE IF" condition="not ${random_decision}">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-07T16:12:35.000158" level="INFO">Field will not be filled with data.</msg>
 <arg>Field will not be filled with data.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-07T16:12:35.000158" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-04-07T16:12:35.000158" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Fail" owner="BuiltIn">
 <arg>Incorrect value for "random_decision" variable found in "Select random value from the 'Subjects' auto complete field" keyword. \n Please provide boolean value.</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2024-04-07T16:12:35.000158" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-04-07T16:12:35.000158" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-04-07T16:12:34.999160" elapsed="0.000998"/>
+<status status="PASS" start="2024-04-07T19:02:36.106804" elapsed="1.697221"/>
 </if>
-<status status="PASS" start="2024-04-07T16:12:34.999160" elapsed="0.000998"/>
+<status status="PASS" start="2024-04-07T19:02:36.106804" elapsed="1.697221"/>
 </kw>
 <kw name="Check random values from the 'Hobbies' check boxes" owner="practiceFormPage">
 <kw name="Return True Or False Randomly" owner="randomDecision">
-<msg time="2024-04-07T16:12:35.001161" level="INFO">${random_decision} = False</msg>
+<msg time="2024-04-07T19:02:37.804025" level="INFO">${random_decision} = False</msg>
 <var>${random_decision}</var>
-<status status="PASS" start="2024-04-07T16:12:35.001161" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </kw>
 <if>
 <branch type="IF" condition="${random_decision}">
 <kw name="Continue with random selection of the 'Hobbies' check boxes" owner="practiceFormPage">
-<status status="NOT RUN" start="2024-04-07T16:12:35.001161" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-04-07T16:12:35.001161" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE IF" condition="not ${random_decision}">
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-04-07T16:12:35.001161" level="INFO">Field will not be filled with data.</msg>
+<msg time="2024-04-07T19:02:37.804025" level="INFO">Field will not be filled with data.</msg>
 <arg>Field will not be filled with data.</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-04-07T16:12:35.001161" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-04-07T16:12:35.001161" elapsed="0.001002"/>
+<status status="PASS" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </branch>
 <branch type="ELSE">
 <kw name="Fail" owner="BuiltIn">
 <arg>Incorrect value for "random_decision" variable found in "Check random values from the 'Hobbies' check boxes" keyword. \n Please provide boolean value.</arg>
 <doc>Fails the test with the given message and optionally alters its tags.</doc>
-<status status="NOT RUN" start="2024-04-07T16:12:35.002163" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-04-07T16:12:35.002163" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-04-07T16:12:35.001161" elapsed="0.001002"/>
+<status status="PASS" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </if>
-<status status="PASS" start="2024-04-07T16:12:35.001161" elapsed="0.001002"/>
+<status status="PASS" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </kw>
 <kw name="Upload random 'image' using upload function" owner="practiceFormPage">
 <kw name="Return True Or False Randomly" owner="randomDecision">
-<msg time="2024-04-07T16:12:35.002163" level="INFO">${random_decision} = True</msg>
+<msg time="2024-04-07T19:02:37.804025" level="INFO">${random_decision} = False</msg>
 <var>${random_decision}</var>
-<status status="PASS" start="2024-04-07T16:12:35.002163" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Continue With Upload Image" owner="practiceFormPage">
-<kw name="Upload File" owner="uploadFile">
-<arg>${selectPicture_uploadFile}</arg>
-<arg>${imageFilePath}</arg>
-<status status="PASS" start="2024-04-07T16:12:35.003161" elapsed="0.089108"/>
-</kw>
-<arg>${imageFilePath}</arg>
-<status status="PASS" start="2024-04-07T16:12:35.003161" elapsed="0.089108"/>
-</kw>
 <arg>'${random_decision}' == 'True'</arg>
 <arg>Continue With Upload Image</arg>
 <arg>${imageFilePath}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-07T16:12:35.002163" elapsed="0.090106"/>
+<status status="PASS" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </kw>
 <arg>${imageLocation}</arg>
 <doc>Upload an image or skip based on a random decision.</doc>
-<status status="PASS" start="2024-04-07T16:12:35.002163" elapsed="0.090106"/>
+<status status="PASS" start="2024-04-07T19:02:37.804025" elapsed="0.000000"/>
 </kw>
 <kw name="Fill in the 'Current Address' input text element with correct random data" owner="practiceFormPage">
 <kw name="Return True Or False Randomly" owner="randomDecision">
-<msg time="2024-04-07T16:12:35.093298" level="INFO">${random_decision} = True</msg>
+<msg time="2024-04-07T19:02:37.812341" level="INFO">${random_decision} = False</msg>
 <var>${random_decision}</var>
-<status status="PASS" start="2024-04-07T16:12:35.093298" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-07T19:02:37.812341" elapsed="0.000000"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Continue With 'Current Address'" owner="practiceFormPage">
-<kw name="Fill And Verify Text Field" owner="sendKeys">
-<msg time="2024-04-07T16:12:35.103273" level="INFO">Clicking element 'id:currentAddress'.</msg>
-<arg>${currentAddress_textArea}</arg>
-<arg>${text}</arg>
-<status status="PASS" start="2024-04-07T16:12:35.093298" elapsed="0.161174"/>
-</kw>
-<arg>${text}</arg>
-<status status="PASS" start="2024-04-07T16:12:35.093298" elapsed="0.161174"/>
-</kw>
 <arg>'${random_decision}' == 'True'</arg>
 <arg>Continue With 'Current Address'</arg>
 <arg>${text}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-07T16:12:35.093298" elapsed="0.161174"/>
+<status status="PASS" start="2024-04-07T19:02:37.812341" elapsed="0.000000"/>
 </kw>
 <arg>${currentAddress}</arg>
 <doc>Upload an image or skip based on a random decision.</doc>
-<status status="PASS" start="2024-04-07T16:12:35.093298" elapsed="0.161174"/>
+<status status="PASS" start="2024-04-07T19:02:37.812138" elapsed="0.000203"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-07T16:12:40.255095" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-04-07T19:02:42.813085" level="INFO">Slept 5 seconds.</msg>
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-07T16:12:35.254472" elapsed="5.000623"/>
+<status status="PASS" start="2024-04-07T19:02:37.812865" elapsed="5.000220"/>
 </kw>
 <kw name="Kill Browser Session" owner="commonKeywordsPage" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-04-07T16:12:40.256100" elapsed="2.132266"/>
+<status status="PASS" start="2024-04-07T19:02:42.816101" elapsed="2.172528"/>
 </kw>
-<status status="PASS" start="2024-04-07T16:12:40.255095" elapsed="2.133271"/>
+<status status="PASS" start="2024-04-07T19:02:42.813085" elapsed="2.175544"/>
 </kw>
 <tag>examples</tag>
 <tag>realExample</tag>
 <tag>StudentRegistrationForm</tag>
-<status status="PASS" start="2024-04-07T16:12:30.919218" elapsed="11.469148"/>
+<status status="PASS" start="2024-04-07T19:02:30.973721" elapsed="14.014908"/>
 </test>
 <doc>Verify element exist and click on it</doc>
-<status status="PASS" start="2024-04-07T16:12:30.720505" elapsed="11.669849"/>
+<status status="PASS" start="2024-04-07T19:02:30.682438" elapsed="14.310139"/>
 </suite>
 <statistics>
 <total>

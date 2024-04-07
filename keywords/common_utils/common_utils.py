@@ -88,3 +88,14 @@ class CommonUtils:
 
         # Return the list of WebElement objects
         return elements
+
+    @staticmethod
+    def get_elements_count(locator):
+        # Get the instance of the SeleniumLibrary
+        selenium_lib = BuiltIn().get_library_instance('SeleniumLibrary')
+
+        # Get the web elements matching the given locator
+        elements = selenium_lib.get_webelements(locator)
+
+        # Return the count of elements
+        return len(elements)
