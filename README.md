@@ -114,49 +114,48 @@ The boilerplate is using a Python file for configuration. For more details revie
 
 ## Examples
 There are three kind of examples.
-1. There is example of the structure. For more details check the following files:
-project-root/
-├── keywords/
-│   └── example_structure/
-│       ├── common_functions/
-│       │   └── common_functions.py
-│       └── custom_keyword.py
-├── PO/
-│   └── examples/
-│       └── example_structure/
-│           └── examplePage.robot
-└── tests/
-    └── examples/
-        └── example_structure/
-            └── exampleStructureSpec.robot
+1. There is example of the structure. For more details check the following files (please review that structure in text editor, not in the GitHub):
+project-root/  
+├── keywords/  
+│   └── example_structure/  
+│       ├── common_functions/  
+│       │   └── common_functions.py  
+│       └── custom_keyword.py  
+├── PO/  
+│   └── examples/  
+│       └── example_structure/  
+│           └── examplePage.robot  
+└── tests/  
+    └── examples/  
+        └── example_structure/  
+            └── exampleStructureSpec.robot  
 2. There is examples (with comments) how to add custom keywords. For more details check the following files:
-project-root/
-├── keywords/
-│   ├── common_utils/
-│   │   └── common_utils.py
-│   ├── click.py
-│   └── element.py
-├── PO/
-│   └── examples/
-│       └── customKeywords/
-│           ├── clickItPage.robot
-│           └── elementPage.robot
-└── tests/
-    └── examples/
-        └── customKeywords/
-            ├── clickIt.robot
-            └── element.robot
+project-root/  
+├── keywords/  
+│   ├── common_utils/  
+│   │   └── common_utils.py  
+│   ├── click.py  
+│   └── element.py  
+├── PO/  
+│   └── examples/  
+│       └── customKeywords/  
+│           ├── clickItPage.robot  
+│           └── elementPage.robot  
+└── tests/  
+    └── examples/  
+        └── customKeywords/  
+            ├── clickIt.robot  
+            └── element.robot  
 3. There is one real example. That example shows best practices for automation testing. For more details check the following files:
-project-root/
-├── PO/
-│   └── examples/
-│       └── realExample/
-│           └── practiceFormPage.robot
-└── tests/
-    └── examples/
-        └── realExample/
-            └── practiceForm.robot
-
+project-root/  
+├── PO/  
+│   └── examples/  
+│       └── realExample/  
+│           └── practiceFormPage.robot  
+└── tests/  
+    └── examples/  
+        └── realExample/  
+            └── practiceForm.robot  
 
 ## To Do:
 1. Add headless support for all browsers that can be used from Robot Framework.
