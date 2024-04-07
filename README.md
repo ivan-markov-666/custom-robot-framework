@@ -114,7 +114,7 @@ The boilerplate is using a Python file for configuration. For more details revie
 
 ## Examples
 There are three kind of examples.
-1. There is example of the structure. For more details check the following files (please review that structure in text editor, not in the GitHub):
+1. There is example of the structure. For more details check the following files (please review that structure in text editor, not in the GitHub):  
 project-root/  
 ├── keywords/  
 │   └── example_structure/  
@@ -129,7 +129,7 @@ project-root/
     └── examples/  
         └── example_structure/  
             └── exampleStructureSpec.robot  
-2. There is examples (with comments) how to add custom keywords. For more details check the following files:
+2. There is examples (with comments) how to add custom keywords. For more details check the following files:  
 project-root/  
 ├── keywords/  
 │   ├── common_utils/  
@@ -146,7 +146,7 @@ project-root/
         └── customKeywords/  
             ├── clickIt.robot  
             └── element.robot  
-3. There is one real example. That example shows best practices for automation testing. For more details check the following files:
+3. There is one real example. That example shows best practices for automation testing. For more details check the following files:  
 project-root/  
 ├── PO/  
 │   └── examples/  
