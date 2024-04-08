@@ -19,15 +19,32 @@ Only files related to test ```clickIt``` and ```element``` have detailed comment
 You may need to change the policy for executing the scripts in the PowerShell is you get an error. To change the policy type the following command in your terminal:
 ```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned```  
 If you met a problem with the permissions, execute the command in PowerShell opened with Administrator rights.
+<<<<<<< HEAD
+4. Install Anaconda  
+   Create new a conda environment.  
+   Activate your conda environment.
+=======
 4. Install Anaconda
 -   Create new a conda environment
 -   Activate your conda environment.
+>>>>>>> 7c301897bc533653ef4288099064617766809559
 5. Add robotframework library
 > pip install robotframework
 6. Add selenium library
 > pip install robotframework-seleniumlibrary
 7. Add robotframework-seleniumlibrary
 > pip install robotframework-seleniumlibrary
+<<<<<<< HEAD
+8. Add faker library
+> pip install robotframework-faker
+9. Use VS Code or PyCharm IDE
+10. Download all web drivers that you will use and add the path of the folder containing the drivers into the environment variables.
+11. Download and install all browsers that you will use for testing.  
+That frame was tested only with Chrome and Firefox, for all other browsers you may need to make changes in the following files:   
+```config/config.py``` - you will need to change the config for the browser that you want to use.  
+```PO/common_keywords/commonKeywordsPage.robot``` - you will need to add extra code for other browsers in the "Keywords" section.
+12. Go to the project's root folder and rename/copy ".env_EXAMPLE" file to ".env".  
+=======
 8. Use VS Code or PyCharm IDE
 9. Download all web drivers that you will use and add the path of the folder containing the drivers into the environment variables.
 10. Download and install all browsers that you will use for testing.  
@@ -35,6 +52,7 @@ That frame was tested only with Chrome and Firefox, for all other browsers you m
 ```config/config.py``` - you will need to change the config for the browser that you want to use.  
 ```PO/common_keywords/commonKeywordsPage.robot``` - you will need to add extra code for other browsers in the "Keywords" section.
 11. Go to the project's root folder and rename/copy ".env_EXAMPLE" file to ".env".  
+>>>>>>> 7c301897bc533653ef4288099064617766809559
 Open the ".env" file and provide all needed data (baseURL, etc.).
 
 ## Execution

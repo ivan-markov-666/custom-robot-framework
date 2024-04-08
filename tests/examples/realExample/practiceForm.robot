@@ -7,21 +7,23 @@ Test Teardown    Kill Browser Session
 Resource         ../../../PO/examples/realExample/practiceFormPage.robot
 Resource         ../../../PO/common_keywords/commonKeywordsPage.robot
 Variables        ../../../config/config.py
+Variables        ../../../dynamic_data/faker_data.py
 
 *** Variables ***
 ${login_urlAddress}                    ${baseUrl}/automation-practice-form
-${firstName}                           Tester
-${lastName}                            Testerov
-${email}                               testingemail@testing.com
-${mobileNumber}                        1234567890
-${dateOfBirth}                         06 Apr 2005
+${firstName}                           ${firstNameFaker}
+${lastName}                            ${lastNameFaker}
+${email}                               ${emailFaker}
+${mobileNumber}                        ${mobileFaker}
+${dateOfBirth}                         ${birthdateFaker}
 ${imageLocation}                       ./uploadFiles/upload-image.jpg
-${currentAddress}                      lorem ipsum text
+${currentAddress}                      ${addressFaker}
 
 *** Test Cases ***
 Verify Element Exist And Click On It
     [Tags]    examples    realExample    StudentRegistrationForm
-            Navigate to the 'Student Registration Form' page                                       ${login_urlAddress}
+            Log To Console    ${firstName}
+            Navigate to the 'Student Registration Form' page                                      ${login_urlAddress}
             Fill in the 'First Name' input text element with correct random data                  ${firstName}
             Fill in the 'Last Name' input text element with correct random data                   ${lastName}
             Fill in the 'Email' input text element with correct random data                       ${email}
