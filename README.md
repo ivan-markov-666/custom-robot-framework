@@ -19,22 +19,15 @@ Only files related to test ```clickIt``` and ```element``` have detailed comment
 You may need to change the policy for executing the scripts in the PowerShell is you get an error. To change the policy type the following command in your terminal:
 ```Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned```  
 If you met a problem with the permissions, execute the command in PowerShell opened with Administrator rights.
-<<<<<<< HEAD
 4. Install Anaconda  
    Create new a conda environment.  
    Activate your conda environment.
-=======
-4. Install Anaconda
--   Create new a conda environment
--   Activate your conda environment.
->>>>>>> 7c301897bc533653ef4288099064617766809559
 5. Add robotframework library
 > pip install robotframework
 6. Add selenium library
 > pip install robotframework-seleniumlibrary
 7. Add robotframework-seleniumlibrary
 > pip install robotframework-seleniumlibrary
-<<<<<<< HEAD
 8. Add faker library
 > pip install robotframework-faker
 9. Use VS Code or PyCharm IDE
