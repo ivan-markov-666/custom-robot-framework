@@ -1,3 +1,6 @@
 .venv
 .env
 .pabotsuitenames
+report.html
+output.xml
+log.html
