@@ -45,7 +45,6 @@ That frame was tested only with Chrome and Firefox, for all other browsers you m
 ```config/config.py``` - you will need to change the config for the browser that you want to use.  
 ```PO/common_keywords/commonKeywordsPage.robot``` - you will need to add extra code for other browsers in the "Keywords" section.
 11. Go to the project's root folder and rename/copy ".env_EXAMPLE" file to ".env".  
->>>>>>> 7c301897bc533653ef4288099064617766809559
 Open the ".env" file and provide all needed data (baseURL, etc.).
 
 ## Execution
